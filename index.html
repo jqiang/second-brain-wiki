@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Second Brain — Knowledge Map</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #f8f9fb;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --text: #1a202c;
+      --text-muted: #718096;
+      --accent: #3b82f6;
+      --note:     #3b82f6;
+      --wiki:     #f59e0b;
+      --question: #8b5cf6;
+      --idea:     #10b981;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* ── Loading overlay ── */
+    .loading-overlay {
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      z-index: 100;
+    }
+
+    .spinner {
+      width: 36px;
+      height: 36px;
+      border: 3px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .loading-text { font-size: 13px; color: var(--text-muted); }
+
+    /* ── Header ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-shrink: 0;
+      z-index: 10;
+    }
+
+    .logo { font-size: 15px; font-weight: 700; white-space: nowrap; }
+    .logo span { color: var(--accent); }
+
+    .updated {
+      font-size: 11px;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .tabs { display: flex; gap: 2px; }
+
+    .tab {
+      padding: 5px 14px;
+      border-radius: 6px;
+      border: 1px solid transparent;
+      background: none;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: all 0.15s;
+    }
+
+    .tab:hover { background: var(--bg); color: var(--text); }
+    .tab.active { background: var(--accent); color: white; }
+
+    .search-wrap {
+      flex: 1;
+      max-width: 340px;
+      margin-left: auto;
+      position: relative;
+    }
+
+    .search-wrap svg {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    #search-input {
+      width: 100%;
+      padding: 7px 12px 7px 32px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 13px;
+      background: var(--bg);
+      outline: none;
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    #search-input:focus { border-color: var(--accent); background: white; }
+
+    /* ── Main layout ── */
+    .main { flex: 1; display: flex; overflow: hidden; }
+
+    .view { flex: 1; overflow: hidden; display: none; flex-direction: column; }
+    .view.active { display: flex; }
+
+    /* ── Graph view ── */
+    #graph-view { position: relative; }
+    #cy { flex: 1; background: var(--bg); }
+
+    .graph-controls {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      z-index: 5;
+    }
+
+    .type-chip {
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 2px solid;
+      transition: all 0.15s;
+      user-select: none;
+    }
+
+    .type-chip[data-type="Note"]     { border-color: var(--note);     color: var(--note);     background: white; }
+    .type-chip[data-type="Wiki"]     { border-color: var(--wiki);     color: var(--wiki);     background: white; }
+    .type-chip[data-type="Question"] { border-color: var(--question); color: var(--question); background: white; }
+    .type-chip[data-type="Idea"]     { border-color: var(--idea);     color: var(--idea);     background: white; }
+
+    .type-chip.on[data-type="Note"]     { background: var(--note);     color: white; }
+    .type-chip.on[data-type="Wiki"]     { background: var(--wiki);     color: white; }
+    .type-chip.on[data-type="Question"] { background: var(--question); color: white; }
+    .type-chip.on[data-type="Idea"]     { background: var(--idea);     color: white; }
+
+    .layout-select {
+      padding: 4px 8px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 11px;
+      background: white;
+      cursor: pointer;
+    }
+
+    .graph-hint {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      font-size: 11px;
+      color: var(--text-muted);
+      background: rgba(255,255,255,0.85);
+      padding: 4px 8px;
+      border-radius: 6px;
+      pointer-events: none;
+    }
+
+    .legend {
+      position: absolute;
+      bottom: 14px;
+      right: 14px;
+      background: rgba(255,255,255,0.9);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      z-index: 5;
+    }
+
+    .legend-item { display: flex; align-items: center; gap: 7px; font-size: 11px; color: var(--text-muted); }
+
+    .legend-dot { width: 10px; height: 10px; flex-shrink: 0; }
+    .legend-dot.Note     { background: var(--note);     border-radius: 50%; }
+    .legend-dot.Wiki     { background: var(--wiki);     transform: rotate(45deg); border-radius: 1px; }
+    .legend-dot.Question { background: var(--question); border-radius: 2px; }
+    .legend-dot.Idea     { background: var(--idea);     border-radius: 50% 0; }
+
+    /* ── Topics view ── */
+    #topics-view { overflow-y: auto; padding: 20px; }
+
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 14px;
+    }
+
+    .topic-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .topic-card-header {
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+      transition: background 0.1s;
+    }
+
+    .topic-card-header:hover { background: #eef2f7; }
+
+    .topic-name { font-size: 13px; font-weight: 600; }
+    .topic-meta { display: flex; align-items: center; gap: 8px; }
+    .topic-count { font-size: 11px; color: var(--text-muted); }
+    .topic-hint { font-size: 10px; color: var(--accent); opacity: 0; transition: opacity 0.15s; }
+    .topic-card-header:hover .topic-hint { opacity: 1; }
+
+    .topic-card-body { padding: 6px 0; }
+
+    .topic-node-row {
+      padding: 6px 16px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      cursor: pointer;
+      transition: background 0.1s;
+    }
+
+    .topic-node-row:hover { background: var(--bg); }
+
+    .type-dot { width: 8px; height: 8px; flex-shrink: 0; border-radius: 2px; }
+    .type-dot.Note     { background: var(--note);     border-radius: 50%; }
+    .type-dot.Wiki     { background: var(--wiki);     transform: rotate(45deg); }
+    .type-dot.Question { background: var(--question); border-radius: 2px; }
+    .type-dot.Idea     { background: var(--idea);     border-radius: 50% 0; }
+
+    .topic-node-label { font-size: 12px; line-height: 1.3; }
+
+    /* ── Search results view ── */
+    #search-view { overflow-y: auto; padding: 20px; }
+
+    .search-meta { font-size: 12px; color: var(--text-muted); margin-bottom: 14px; }
+
+    .search-results { display: flex; flex-direction: column; gap: 8px; }
+
+    .search-result {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 16px;
+      cursor: pointer;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    .search-result:hover { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(59,130,246,0.08); }
+
+    .result-header { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; flex-wrap: wrap; }
+    .result-title { font-size: 13px; font-weight: 600; }
+
+    .type-badge {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      color: white;
+    }
+
+    .result-tags { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 6px; }
+
+    .result-tag {
+      font-size: 10px;
+      padding: 1px 7px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--text-muted);
+    }
+
+    .result-snippet { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+    .result-snippet mark { background: #fef08a; color: inherit; border-radius: 2px; padding: 0 1px; }
+
+    /* ── Detail panel ── */
+    .detail-panel {
+      width: 380px;
+      background: var(--surface);
+      border-left: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      flex-shrink: 0;
+      transform: translateX(100%);
+      transition: transform 0.2s ease;
+    }
+
+    .detail-panel.open { transform: translateX(0); }
+
+    .detail-header {
+      padding: 16px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .detail-header-content { flex: 1; min-width: 0; }
+    .detail-type-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; flex-wrap: wrap; }
+    .detail-title { font-size: 15px; font-weight: 700; line-height: 1.3; }
+
+    .detail-close {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-muted);
+      font-size: 20px;
+      line-height: 1;
+      flex-shrink: 0;
+      padding: 2px;
+      border-radius: 4px;
+      transition: background 0.1s;
+    }
+
+    .detail-close:hover { background: var(--bg); }
+
+    .detail-desc {
+      padding: 10px 16px;
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.55;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .detail-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .detail-body h1, .detail-body h2, .detail-body h3 {
+      font-size: 13px;
+      font-weight: 700;
+      margin: 16px 0 5px;
+    }
+
+    .detail-body h1:first-child, .detail-body h2:first-child { margin-top: 0; }
+    .detail-body p { margin-bottom: 10px; }
+    .detail-body ul, .detail-body ol { padding-left: 18px; margin-bottom: 10px; }
+    .detail-body li { margin-bottom: 3px; }
+    .detail-body a { color: var(--accent); text-decoration: none; cursor: pointer; }
+    .detail-body a:hover { text-decoration: underline; }
+    .detail-body code { background: var(--bg); padding: 1px 4px; border-radius: 3px; font-size: 11px; border: 1px solid var(--border); }
+    .detail-body pre { background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 10px 12px; overflow-x: auto; margin-bottom: 10px; }
+    .detail-body pre code { background: none; border: none; padding: 0; font-size: 11px; }
+    .detail-body table { width: 100%; border-collapse: collapse; margin-bottom: 10px; font-size: 11px; }
+    .detail-body th, .detail-body td { border: 1px solid var(--border); padding: 5px 8px; text-align: left; }
+    .detail-body th { background: var(--bg); font-weight: 600; }
+    .detail-body strong { font-weight: 600; }
+    .detail-body em { font-style: italic; }
+  </style>
+</head>
+<body>
+
+<!-- Loading overlay — hidden after bundle.json loads -->
+<div class="loading-overlay" id="loading-overlay">
+  <div class="spinner"></div>
+  <div class="loading-text" id="loading-text">Loading knowledge bundle…</div>
+</div>
+
+<header>
+  <span class="logo">Second <span>Brain</span></span>
+  <span class="updated" id="updated-at"></span>
+
+  <div class="tabs">
+    <button class="tab active" data-view="graph">Graph</button>
+    <button class="tab" data-view="topics">Topics</button>
+  </div>
+
+  <div class="search-wrap">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+    </svg>
+    <input type="text" id="search-input" placeholder="Search notes, questions, ideas…" autocomplete="off" spellcheck="false">
+  </div>
+</header>
+
+<div class="main">
+
+  <!-- Graph view -->
+  <div id="graph-view" class="view active">
+    <div class="graph-controls">
+      <button class="type-chip on" data-type="Note">Note</button>
+      <button class="type-chip on" data-type="Wiki">Wiki</button>
+      <button class="type-chip on" data-type="Question">Question</button>
+      <button class="type-chip on" data-type="Idea">Idea</button>
+      <select class="layout-select" id="layout-select">
+        <option value="cose">Force</option>
+        <option value="concentric">Concentric</option>
+        <option value="breadthfirst">Breadth-first</option>
+        <option value="circle">Circle</option>
+        <option value="grid">Grid</option>
+      </select>
+    </div>
+    <div id="cy"></div>
+    <div class="legend">
+      <div class="legend-item"><span class="legend-dot Note"></span> Note</div>
+      <div class="legend-item"><span class="legend-dot Wiki"></span> Wiki</div>
+      <div class="legend-item"><span class="legend-dot Question"></span> Question</div>
+      <div class="legend-item"><span class="legend-dot Idea"></span> Idea</div>
+    </div>
+    <div class="graph-hint">Click a node to explore · Click background to reset</div>
+  </div>
+
+  <!-- Topics view -->
+  <div id="topics-view" class="view">
+    <div class="topics-grid" id="topics-grid"></div>
+  </div>
+
+  <!-- Search results view -->
+  <div id="search-view" class="view">
+    <div class="search-meta" id="search-meta"></div>
+    <div class="search-results" id="search-results"></div>
+  </div>
+
+  <!-- Detail panel -->
+  <aside class="detail-panel" id="detail-panel">
+    <div class="detail-header">
+      <div class="detail-header-content">
+        <div class="detail-type-row" id="detail-type-row"></div>
+        <div class="detail-title" id="detail-title"></div>
+      </div>
+      <button class="detail-close" id="detail-close" title="Close">×</button>
+    </div>
+    <div class="detail-desc" id="detail-desc"></div>
+    <div class="detail-body" id="detail-body"></div>
+  </aside>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+
+<script>
+'use strict';
+
+// ── Constants ──────────────────────────────────────────────────────────────
+const TYPE_COLORS = { Note: '#3b82f6', Wiki: '#f59e0b', Question: '#8b5cf6', Idea: '#10b981' };
+const TYPE_SHAPES = { Note: 'ellipse', Wiki: 'diamond', Question: 'round-rectangle', Idea: 'ellipse' };
+
+// ── State ──────────────────────────────────────────────────────────────────
+let cy = null;
+let activeView = 'graph';
+let prevTabView = 'graph';
+const activeTypes = new Set(['Note', 'Wiki', 'Question', 'Idea']);
+
+// ── Helpers ────────────────────────────────────────────────────────────────
+function getNode(id) { return window.BUNDLE.nodes.find(n => n.id === id); }
+
+function escapeRe(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+function highlight(text, q) {
+  if (!q || !text) return text || '';
+  return text.replace(new RegExp(`(${escapeRe(q)})`, 'gi'), '<mark>$1</mark>');
+}
+
+function snippet(nodeId, q, maxLen = 130) {
+  const body = (window.BUNDLE.bodies[nodeId] || '').replace(/#+\s/g, '').replace(/[*_`]/g, '');
+  if (!body) return '';
+  const ql = q.toLowerCase();
+  const idx = body.toLowerCase().indexOf(ql);
+  const start = Math.max(0, idx > 40 ? idx - 40 : 0);
+  let s = body.slice(start, start + maxLen);
+  if (start > 0) s = '…' + s;
+  if (start + maxLen < body.length) s += '…';
+  return highlight(s, q);
+}
+
+// ── Detail panel ───────────────────────────────────────────────────────────
+function showDetail(id) {
+  const node = getNode(id);
+  if (!node) return;
+
+  document.getElementById('detail-type-row').innerHTML =
+    `<span class="type-badge" style="background:${TYPE_COLORS[node.type]}">${node.type}</span>` +
+    (node.tags || []).map(t => `<span class="result-tag">${t}</span>`).join('');
+
+  document.getElementById('detail-title').textContent = node.label;
+
+  const desc = document.getElementById('detail-desc');
+  if (node.description) { desc.textContent = node.description; desc.style.display = ''; }
+  else { desc.style.display = 'none'; }
+
+  const bodyEl = document.getElementById('detail-body');
+  bodyEl.innerHTML = marked.parse(window.BUNDLE.bodies[id] || '');
+
+  // Rewrite internal /path links to navigate within the viz
+  bodyEl.querySelectorAll('a[href^="/"]').forEach(a => {
+    const target = a.getAttribute('href').replace(/^\//, '').replace(/\.md$/, '');
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      showDetail(target);
+      if (cy) {
+        const n = cy.getElementById(target);
+        if (n.length) cy.animate({ center: { eles: n }, zoom: 1.4 }, { duration: 350 });
+      }
+    });
+  });
+
+  if (cy) {
+    cy.$(':selected').unselect();
+    const n = cy.getElementById(id);
+    if (n.length) n.select();
+  }
+
+  document.getElementById('detail-panel').classList.add('open');
+}
+
+function hideDetail() {
+  document.getElementById('detail-panel').classList.remove('open');
+  if (cy) cy.$(':selected').unselect();
+}
+
+document.getElementById('detail-close').addEventListener('click', hideDetail);
+
+// ── Graph ──────────────────────────────────────────────────────────────────
+function initGraph() {
+  const elements = [];
+
+  window.BUNDLE.nodes.forEach(n => {
+    elements.push({
+      data: {
+        id: n.id,
+        label: n.label,
+        type: n.type,
+        color: TYPE_COLORS[n.type] || '#aaa',
+        shape: TYPE_SHAPES[n.type] || 'ellipse',
+      }
+    });
+  });
+
+  window.BUNDLE.edges.forEach((e, i) => {
+    elements.push({ data: { id: `e${i}`, source: e.source, target: e.target } });
+  });
+
+  cy = cytoscape({
+    container: document.getElementById('cy'),
+    elements,
+    style: [
+      {
+        selector: 'node',
+        style: {
+          'background-color': 'data(color)',
+          'shape': 'data(shape)',
+          'label': 'data(label)',
+          'font-size': '10px',
+          'font-family': '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+          'text-valign': 'bottom',
+          'text-margin-y': '6px',
+          'text-wrap': 'wrap',
+          'text-max-width': '90px',
+          'color': '#334155',
+          'width': 26,
+          'height': 26,
+          'border-width': 2,
+          'border-color': '#ffffff',
+        }
+      },
+      {
+        selector: 'node[type="Wiki"]',
+        style: { 'width': 38, 'height': 38, 'font-weight': '700', 'font-size': '11px' }
+      },
+      {
+        selector: 'node:selected',
+        style: { 'border-color': '#f97316', 'border-width': 3 }
+      },
+      {
+        selector: 'node.dim',
+        style: { 'opacity': 0.12 }
+      },
+      {
+        selector: 'edge',
+        style: {
+          'width': 1.5,
+          'line-color': '#cbd5e1',
+          'target-arrow-color': '#cbd5e1',
+          'target-arrow-shape': 'triangle',
+          'arrow-scale': 0.7,
+          'curve-style': 'bezier',
+          'opacity': 0.6,
+        }
+      },
+      {
+        selector: 'edge.dim',
+        style: { 'opacity': 0.04 }
+      },
+      {
+        selector: 'edge.hot',
+        style: { 'line-color': '#f97316', 'target-arrow-color': '#f97316', 'opacity': 1, 'width': 2 }
+      }
+    ],
+    layout: {
+      name: 'cose',
+      idealEdgeLength: 110,
+      nodeRepulsion: 5000,
+      gravity: 0.25,
+      padding: 50,
+      animate: false,
+    },
+    minZoom: 0.15,
+    maxZoom: 3.5,
+    wheelSensitivity: 0.2,
+  });
+
+  cy.on('tap', 'node', e => {
+    const node = e.target;
+    cy.elements().removeClass('dim hot');
+    cy.elements().not(node.closedNeighborhood()).addClass('dim');
+    node.connectedEdges().addClass('hot').removeClass('dim');
+    showDetail(node.id());
+  });
+
+  cy.on('tap', e => {
+    if (e.target !== cy) return;
+    cy.elements().removeClass('dim hot');
+    hideDetail();
+  });
+}
+
+// Type filter chips
+document.querySelectorAll('.type-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    const type = chip.dataset.type;
+    if (activeTypes.has(type)) {
+      if (activeTypes.size === 1) return;
+      activeTypes.delete(type);
+      chip.classList.remove('on');
+    } else {
+      activeTypes.add(type);
+      chip.classList.add('on');
+    }
+    if (!cy) return;
+    cy.batch(() => {
+      cy.nodes().forEach(n => n.style('display', activeTypes.has(n.data('type')) ? 'element' : 'none'));
+      cy.edges().forEach(e => {
+        const ok = activeTypes.has(e.source().data('type')) && activeTypes.has(e.target().data('type'));
+        e.style('display', ok ? 'element' : 'none');
+      });
+    });
+  });
+});
+
+document.getElementById('layout-select').addEventListener('change', e => {
+  if (cy) cy.layout({ name: e.target.value, animate: true, animationDuration: 500, padding: 50 }).run();
+});
+
+// ── Topics ─────────────────────────────────────────────────────────────────
+function renderTopics() {
+  const map = {};
+  window.BUNDLE.nodes.forEach(n => {
+    (n.tags || []).forEach(tag => {
+      if (!map[tag]) map[tag] = [];
+      map[tag].push(n);
+    });
+  });
+
+  const topics = Object.entries(map).sort((a, b) => b[1].length - a[1].length);
+  const typeOrder = { Wiki: 0, Note: 1, Question: 2, Idea: 3 };
+
+  document.getElementById('topics-grid').innerHTML = topics.map(([topic, nodes]) => {
+    const sorted = [...nodes].sort((a, b) => (typeOrder[a.type] ?? 9) - (typeOrder[b.type] ?? 9));
+    const rows = sorted.map(n =>
+      `<div class="topic-node-row" data-id="${n.id}">
+        <span class="type-dot ${n.type}"></span>
+        <span class="topic-node-label">${n.label}</span>
+      </div>`
+    ).join('');
+
+    return `<div class="topic-card">
+      <div class="topic-card-header" data-topic="${topic}">
+        <span class="topic-name">${topic}</span>
+        <span class="topic-meta">
+          <span class="topic-count">${nodes.length} item${nodes.length !== 1 ? 's' : ''}</span>
+          <span class="topic-hint">↗ view in graph</span>
+        </span>
+      </div>
+      <div class="topic-card-body">${rows}</div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('topics-grid').querySelectorAll('.topic-node-row').forEach(row => {
+    row.addEventListener('click', () => showDetail(row.dataset.id));
+  });
+
+  document.getElementById('topics-grid').querySelectorAll('.topic-card-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const topic = header.dataset.topic;
+      switchView('graph');
+      requestAnimationFrame(() => {
+        if (!cy) return;
+        cy.elements().removeClass('dim hot');
+        const topicIds = new Set(
+          window.BUNDLE.nodes.filter(n => (n.tags || []).includes(topic)).map(n => n.id)
+        );
+        const topicCy = cy.nodes().filter(n => topicIds.has(n.id()));
+        cy.elements().not(topicCy.closedNeighborhood()).addClass('dim');
+        if (topicCy.length) cy.animate({ fit: { eles: topicCy, padding: 80 } }, { duration: 400 });
+      });
+    });
+  });
+}
+
+// ── Search ─────────────────────────────────────────────────────────────────
+let searchTimer = null;
+
+document.getElementById('search-input').addEventListener('input', e => {
+  clearTimeout(searchTimer);
+  const q = e.target.value.trim();
+  if (!q) {
+    switchView(prevTabView);
+    if (cy) cy.elements().removeClass('dim hot');
+    return;
+  }
+  searchTimer = setTimeout(() => runSearch(q), 130);
+});
+
+function runSearch(q) {
+  const ql = q.toLowerCase();
+  const results = window.BUNDLE.nodes.filter(n => {
+    const body = (window.BUNDLE.bodies[n.id] || '').toLowerCase();
+    return (
+      n.label.toLowerCase().includes(ql) ||
+      (n.description || '').toLowerCase().includes(ql) ||
+      (n.tags || []).some(t => t.toLowerCase().includes(ql)) ||
+      body.includes(ql)
+    );
+  });
+
+  document.getElementById('search-meta').textContent =
+    `${results.length} result${results.length !== 1 ? 's' : ''} for "${q}"`;
+
+  document.getElementById('search-results').innerHTML = results.length
+    ? results.map(n => {
+        const snip = n.description ? highlight(n.description, q) : snippet(n.id, q);
+        return `<div class="search-result" data-id="${n.id}">
+          <div class="result-header">
+            <span class="result-title">${highlight(n.label, q)}</span>
+            <span class="type-badge" style="background:${TYPE_COLORS[n.type]}">${n.type}</span>
+          </div>
+          ${n.tags?.length ? `<div class="result-tags">${n.tags.map(t => `<span class="result-tag">${highlight(t, q)}</span>`).join('')}</div>` : ''}
+          ${snip ? `<div class="result-snippet">${snip}</div>` : ''}
+        </div>`;
+      }).join('')
+    : '<div style="color:var(--text-muted);font-size:13px;padding:4px 0">No results found.</div>';
+
+  document.querySelectorAll('.search-result').forEach(el => {
+    el.addEventListener('click', () => showDetail(el.dataset.id));
+  });
+
+  if (cy) {
+    const matchIds = new Set(results.map(n => n.id));
+    cy.elements().removeClass('dim hot');
+    cy.nodes().forEach(n => { if (!matchIds.has(n.id())) n.addClass('dim'); });
+    cy.edges().addClass('dim');
+  }
+
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.getElementById('search-view').classList.add('active');
+}
+
+// ── Tab switching ───────────────────────────────────────────────────────────
+function switchView(name) {
+  activeView = name;
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.getElementById(`${name}-view`).classList.add('active');
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.view === name));
+  if (name === 'graph' && cy) setTimeout(() => cy.resize(), 10);
+}
+
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.getElementById('search-input').value = '';
+    if (cy) cy.elements().removeClass('dim hot');
+    prevTabView = tab.dataset.view;
+    switchView(tab.dataset.view);
+  });
+});
+
+// ── Boot — fetch bundle.json then initialise ────────────────────────────────
+async function boot() {
+  try {
+    const r = await fetch('./bundle.json');
+    if (!r.ok) throw new Error(`HTTP ${r.status} — bundle.json not found`);
+    window.BUNDLE = await r.json();
+  } catch (err) {
+    document.getElementById('loading-text').textContent = `Failed to load: ${err.message}`;
+    return;
+  }
+
+  // Show generated_at timestamp in header
+  if (window.BUNDLE.generated_at) {
+    const d = new Date(window.BUNDLE.generated_at);
+    document.getElementById('updated-at').textContent =
+      'Updated ' + d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  }
+
+  document.getElementById('loading-overlay').style.display = 'none';
+  initGraph();
+  renderTopics();
+}
+
+boot();
+</script>
+</body>
+</html>

@@ -399,8 +399,8 @@
   <span class="updated" id="updated-at"></span>
 
   <div class="tabs">
-    <button class="tab active" data-view="graph">Graph</button>
-    <button class="tab" data-view="topics">Topics</button>
+    <button class="tab" data-view="graph">Graph</button>
+    <button class="tab active" data-view="topics">Topics</button>
   </div>
 
   <div class="search-wrap">
@@ -414,7 +414,7 @@
 <div class="main">
 
   <!-- Graph view -->
-  <div id="graph-view" class="view active">
+  <div id="graph-view" class="view">
     <div class="graph-controls">
       <button class="type-chip on" data-type="Note">Note</button>
       <button class="type-chip on" data-type="Wiki">Wiki</button>
@@ -424,7 +424,7 @@
         <option value="cose">Force</option>
         <option value="concentric">Concentric</option>
         <option value="breadthfirst">Breadth-first</option>
-        <option value="circle">Circle</option>
+        <option value="circle" selected>Circle</option>
         <option value="grid">Grid</option>
       </select>
     </div>
@@ -439,7 +439,7 @@
   </div>
 
   <!-- Topics view -->
-  <div id="topics-view" class="view">
+  <div id="topics-view" class="view active">
     <div class="topics-grid" id="topics-grid"></div>
   </div>
 
@@ -476,8 +476,8 @@ const TYPE_SHAPES = { Note: 'ellipse', Wiki: 'diamond', Question: 'round-rectang
 
 // ── State ──────────────────────────────────────────────────────────────────
 let cy = null;
-let activeView = 'graph';
-let prevTabView = 'graph';
+let activeView = 'topics';
+let prevTabView = 'topics';
 const activeTypes = new Set(['Note', 'Wiki', 'Question', 'Idea']);
 
 // ── Helpers ────────────────────────────────────────────────────────────────
@@ -626,10 +626,7 @@ function initGraph() {
       }
     ],
     layout: {
-      name: 'cose',
-      idealEdgeLength: 110,
-      nodeRepulsion: 5000,
-      gravity: 0.25,
+      name: 'circle',
       padding: 50,
       animate: false,
     },

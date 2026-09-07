@@ -1,2 +1,1 @@
-single—here
-double\\u2014here
+two backslashes: — end

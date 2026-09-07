@@ -1,1 +1,538 @@
-/tmp/claude-0/-home-user/be57b804-2991-5fdd-bd7e-6556905b9b8a/scratchpad/bundle_reconstructed.json
+{
+  "generated_at": "2026-09-07T04:06:42Z",
+  "nodes": [
+    {
+      "id": "wiki/ai-ml",
+      "label": "AI / ML",
+      "type": "Wiki",
+      "description": "The AI / ML topic captures knowledge about Claude's usage patterns, customisation architecture, development workflows, and behavioural guidelines for LLM-driven coding.",
+      "tags": [
+        "AI / ML"
+      ]
+    },
+    {
+      "id": "wiki/architecture",
+      "label": "architecture",
+      "type": "Wiki",
+      "description": "The architecture topic covers three threads: (1) structural and behavioural design principles for software systems built with or guided by LLMs; (2) concrete API architecture patterns, specifically...",
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "id": "wiki/product-thinking",
+      "label": "product thinking",
+      "type": "Wiki",
+      "description": "The product thinking topic captures strategic and philosophical perspectives on AI adoption alongside concrete PM framing for positioning and measuring AI-driven products.",
+      "tags": [
+        "product thinking"
+      ]
+    },
+    {
+      "id": "wiki/cloud-infra",
+      "label": "cloud / infra",
+      "type": "Wiki",
+      "description": "The cloud / infra topic is newly seeded by a deep-dive into Sanity's Content Lake infrastructure, which combines managed databases, search indexes, object storage, and CDN edge caching on Google Cl...",
+      "tags": [
+        "cloud / infra"
+      ]
+    },
+    {
+      "id": "wiki/learning",
+      "label": "learning",
+      "type": "Wiki",
+      "description": "The learning topic covers deliberate skill and knowledge development — particularly the reflective and meta-cognitive practices that enable deep learning rather than rapid throughput.",
+      "tags": [
+        "learning"
+      ]
+    },
+    {
+      "id": "wiki/side-projects",
+      "label": "side-projects",
+      "type": "Wiki",
+      "description": "The side-projects topic covers personal projects built for exploration, learning, and individual use — distinct from work products or commercial ventures.",
+      "tags": [
+        "side-projects"
+      ]
+    },
+    {
+      "id": "notes/mastra-typescript-native-ai-agent-framework",
+      "label": "MASTRA: TypeScript-native AI agent framework",
+      "type": "Note",
+      "description": "**Date**: August 21, 2026 MASTRA is an open-source TypeScript framework for building AI agents, created by the Gatsby team.",
+      "tags": [
+        "AI / ML"
+      ]
+    },
+    {
+      "id": "notes/temporal-durable-execution-for-ai-agent-orchestration",
+      "label": "Temporal: durable execution for AI agent orchestration",
+      "type": "Note",
+      "description": "Temporal is a **durable execution platform** that guarantees workflow completion even after crashes, network outages, or infrastructure failures.",
+      "tags": [
+        "architecture",
+        "AI / ML"
+      ]
+    },
+    {
+      "id": "notes/7-ai-skills-pms-should-master-before-2027-medium-clip",
+      "label": "7 AI skills PMs should master before 2027 (Medium clip)",
+      "type": "Note",
+      "description": "Medium article by Mohit Aggarwal (Sep 27, 2025, ~4 min read).",
+      "tags": [
+        "AI / ML",
+        "product thinking"
+      ]
+    },
+    {
+      "id": "notes/ai-as-human-capability-multiplier-learning-and-organizational-intelligence",
+      "label": "AI as Human Capability Multiplier: Learning and Organizational Intelligence",
+      "type": "Note",
+      "description": "Keynote notes: Better Human with the Help of AI",
+      "tags": [
+        "AI / ML",
+        "learning",
+        "product thinking",
+        "architecture"
+      ]
+    },
+    {
+      "id": "notes/personal-ai-thinking-partner-claude-md-as-self-portrait-reflective-skills-and-the-pippi-model",
+      "label": "Personal AI Thinking Partner: CLAUDE.md as Self-Portrait, Reflective Skills, and the Pippi Model",
+      "type": "Note",
+      "description": "A talk by the creator of the \"Pippi\" personal AI system.",
+      "tags": [
+        "AI / ML",
+        "side-projects"
+      ]
+    },
+    {
+      "id": "notes/knowledge-graph-architecture-for-company-ai-semantic-retrieval-relationships-and-self-improving-loops",
+      "label": "Knowledge Graph Architecture for Company AI: Semantic Retrieval, Relationships, and Self-Improving Loops",
+      "type": "Note",
+      "description": "Continuation of a talk on building a company AI brain (Data Mobility).",
+      "tags": [
+        "AI / ML",
+        "architecture"
+      ]
+    },
+    {
+      "id": "notes/company-ai-knowledge-agent-multi-agent-news-research-pipeline-with-budget-controls",
+      "label": "Company AI Knowledge Agent: Multi-Agent News & Research Pipeline with Budget Controls",
+      "type": "Note",
+      "description": "A mobility data company describes their two-agent AI knowledge system built for staying on top of a specialised domain.",
+      "tags": [
+        "AI / ML",
+        "architecture"
+      ]
+    },
+    {
+      "id": "notes/building-a-personal-ai-thinking-partner-optimising-for-staying-human-not-for-speed",
+      "label": "Building a personal AI thinking partner: optimising for staying human, not for speed",
+      "type": "Note",
+      "description": "Insight from a talk by someone who built their own personal AI system (named Pippi) from scratch.",
+      "tags": [
+        "AI / ML",
+        "learning",
+        "side-projects"
+      ]
+    },
+    {
+      "id": "notes/building-a-company-second-brain-taxonomy-driven-knowledge-with-ai-agents",
+      "label": "Building a company second brain: taxonomy-driven knowledge with AI agents",
+      "type": "Note",
+      "description": "Key insight from a talk on structuring company knowledge for AI agents.",
+      "tags": [
+        "AI / ML",
+        "architecture",
+        "product thinking"
+      ]
+    },
+    {
+      "id": "notes/sanity-s-content-lake-cqrs-architecture-content-os-pivot-pm-interview-prep",
+      "label": "Sanity's Content Lake: CQRS architecture & 'Content OS' pivot (PM interview prep)",
+      "type": "Note",
+      "description": "Here is a comprehensive interview prep briefing document tailored for a Product Manager interviewing for Sanity's **Content Lake / Content Platform** domain.",
+      "tags": [
+        "architecture",
+        "cloud / infra",
+        "product thinking",
+        "AI / ML"
+      ]
+    },
+    {
+      "id": "notes/bff-implementation-web-vs-mobile-response-shaping-with-shared-api-gateway-middleware",
+      "label": "BFF Implementation: Web vs Mobile Response Shaping with Shared API Gateway Middleware",
+      "type": "Note",
+      "description": "Concrete code patterns for implementing the BFF (Backend for Frontend) architecture, showing how a shared endpoint serves different clients with different response shapes.",
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "id": "notes/bff-architecture-pattern-client-specific-api-layers-between-frontend-and-backend-services",
+      "label": "BFF Architecture Pattern: Client-Specific API Layers Between Frontend and Backend Services",
+      "type": "Note",
+      "description": "The Backend for Frontend (BFF) pattern introduces a dedicated API aggregation layer tailored per client type (web, mobile).",
+      "tags": [
+        "architecture"
+      ]
+    },
+    {
+      "id": "notes/being-ai-native-means-workflow-readiness-not-doing-everything-with-ai",
+      "label": "Being AI-native means workflow readiness, not doing everything with AI",
+      "type": "Note",
+      "description": "So here are some thoughts about the AI Native Company.",
+      "tags": [
+        "AI / ML",
+        "product thinking"
+      ]
+    },
+    {
+      "id": "notes/structured-documentation-for-ai-assisted-engineering-adr-prd-and-bdd",
+      "label": "Structured Documentation for AI-Assisted Engineering: ADR, PRD, and BDD",
+      "type": "Note",
+      "description": "Source: *BDD, ADR, PRD, WTF: Capturing Decisions for Humans and AI Alike* — Michal Cichra, Safe Intelligence Both humans and LLMs suffer from limited context.",
+      "tags": [
+        "AI / ML",
+        "architecture"
+      ]
+    },
+    {
+      "id": "notes/llm-agent-coding-behavioral-guidelines-think-first-minimalism-surgical-changes-goal-driven-execution",
+      "label": "LLM agent coding behavioral guidelines: think first, minimalism, surgical changes, goal-driven execution",
+      "type": "Note",
+      "description": "Behavioral guidelines from Andrej Karpathy's CLAUDE.md to reduce common LLM coding mistakes.",
+      "tags": [
+        "AI / ML",
+        "architecture"
+      ]
+    },
+    {
+      "id": "notes/karpathy-s-llm-wiki-reference-gist-on-language-models",
+      "label": "Karpathy's LLM Wiki — reference gist on language models",
+      "type": "Note",
+      "description": "Reference resource by Andrej Karpathy — a wiki-style gist covering language model concepts.",
+      "tags": [
+        "AI / ML"
+      ]
+    },
+    {
+      "id": "notes/claude-code-mcp-three-scope-levels-and-config-storage",
+      "label": "Claude Code MCP: Three Scope Levels and Config Storage",
+      "type": "Note",
+      "description": "Added in the UI; applies globally across all chats and projects, separate from Claude Code.",
+      "tags": [
+        "AI / ML"
+      ]
+    },
+    {
+      "id": "notes/four-ways-to-use-claude-from-chat-user-to-api-builder",
+      "label": "Four Ways to Use Claude: From Chat User to API Builder",
+      "type": "Note",
+      "description": "Claude can be used in four distinct modes:",
+      "tags": [
+        "AI / ML"
+      ]
+    },
+    {
+      "id": "notes/claude-customization-layers-from-system-prompt-to-ui-settings",
+      "label": "Claude Customization Layers: from System Prompt to UI Settings",
+      "type": "Note",
+      "description": "Claude.ai customization options: Project instructions, user preferences, writing styles, MCP tools, and skills.",
+      "tags": [
+        "AI / ML"
+      ]
+    },
+    {
+      "id": "notes/claude-skill-system-skill-md-format-locations-and-types",
+      "label": "Claude Skill System: SKILL.md Format, Locations, and Types",
+      "type": "Note",
+      "description": "Skill format is common to both claude.ai and Claude Code, using a `SKILL.md` file.",
+      "tags": [
+        "AI / ML"
+      ]
+    },
+    {
+      "id": "notes/claude-prototyping-to-production-workflow",
+      "label": "Claude Prototyping-to-Production Workflow",
+      "type": "Note",
+      "description": "Use claude.ai for concept and prototype, Claude Code locally for writing code.",
+      "tags": [
+        "AI / ML"
+      ]
+    },
+    {
+      "id": "questions/what-are-the-key-goals-and-workflows-for-using-claude-effectively",
+      "label": "What are the key goals and workflows for using Claude effectively?",
+      "type": "Question",
+      "description": "Suggested answer — synthesised from notes: Four Ways to Use Claude, Claude Customization Layers, Claude Prototyping-to-Production Workflow.",
+      "tags": [
+        "AI / ML"
+      ]
+    },
+    {
+      "id": "ideas/ohl-instead-of-okr-objective-hypothesis-learning",
+      "label": "OHL instead of OKR: Objective, Hypothesis, Learning",
+      "type": "Idea",
+      "description": "Replace the OKR (Objectives & Key Results) framework with OHL — Objective, Hypothesis, Learning — a more experiment-driven way to frame goals.",
+      "tags": [
+        "product thinking",
+        "decision"
+      ]
+    },
+    {
+      "id": "ideas/ohl-vs-okr-short-capture",
+      "label": "OHL vs OKR (short capture)",
+      "type": "Idea",
+      "description": "Second, near-duplicate Telegram capture of the same OHL-vs-OKR idea, sent 3 seconds after the fuller version — likely a double-send or partial resend of the same thought.",
+      "tags": [
+        "product thinking",
+        "decision"
+      ]
+    },
+    {
+      "id": "ideas/ai-personalized-3d-printed-earring-e-commerce-site",
+      "label": "AI-personalized 3D-printed earring e-commerce site",
+      "type": "Idea",
+      "description": "An e-commerce site where customers provide input/preferences and AI generates a custom earring design, which is then 3D-printed and shipped to them.",
+      "tags": [
+        "side-projects",
+        "AI / ML"
+      ]
+    },
+    {
+      "id": "ideas/limited-edition-drop-earring-brand-with-seasonal-sell-out-batches",
+      "label": "Limited-edition 'drop' earring brand with seasonal sell-out batches",
+      "type": "Idea",
+      "description": "E-commerce earring brand built around a scarcity 'drop' model: produce limited seasonal batches of earrings that are released once and never restocked, creating limited-edition appeal once each batch sells out.",
+      "tags": [
+        "side-projects"
+      ]
+    },
+    {
+      "id": "ideas/import-and-resell-3d-printed-relaxation-toys-from-china",
+      "label": "Import and resell 3D-printed relaxation toys from China",
+      "type": "Idea",
+      "description": "Side-project pitch to import cheap 3D-printed relaxation toys from China and resell them locally for profit, since they're inexpensive to source there but not yet seen in the local market. Worth checking local availability and existing competitors before committing.",
+      "tags": [
+        "side-projects"
+      ]
+    },
+    {
+      "id": "ideas/spanish-language-practice-chatbot",
+      "label": "Spanish language practice chatbot",
+      "type": "Idea",
+      "description": "A conversational chatbot for practicing Spanish through interactive dialogue, enabling hands-on language learning at any time.",
+      "tags": [
+        "side-projects"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "notes/mastra-typescript-native-ai-agent-framework",
+      "target": "wiki/ai-ml"
+    },
+    {
+      "source": "notes/temporal-durable-execution-for-ai-agent-orchestration",
+      "target": "wiki/ai-ml"
+    },
+    {
+      "source": "notes/temporal-durable-execution-for-ai-agent-orchestration",
+      "target": "wiki/architecture"
+    },
+    {
+      "source": "notes/7-ai-skills-pms-should-master-before-2027-medium-clip",
+      "target": "wiki/ai-ml"
+    },
+    {
+      "source": "notes/7-ai-skills-pms-should-master-before-2027-medium-clip",
+      "target": "wiki/product-thinking"
+    },
+    {
+      "source": "notes/ai-as-human-capability-multiplier-learning-and-organizational-intelligence",
+      "target": "wiki/ai-ml"
+    },
+    {
+      "source": "notes/ai-as-human-capability-multiplier-learning-and-organizational-intelligence",
+      "target": "wiki/learning"
+    },
+    {
+      "source": "notes/ai-as-human-capability-multiplier-learning-and-organizational-intelligence",
+      "target": "wiki/product-thinking"
+    },
+    {
+      "source": "notes/ai-as-human-capability-multiplier-learning-and-organizational-intelligence",
+      "target": "wiki/architecture"
+    },
+    {
+      "source": "notes/personal-ai-thinking-partner-claude-md-as-self-portrait-reflective-skills-and-the-pippi-model",
+      "target": "wiki/ai-ml"
+    },
+    {
+      "source": "notes/personal-ai-thinking-partner-claude-md-as-self-portrait-reflective-skills-and-the-pippi-model",
+      "target": "wiki/side-projects"
+    },
+    {
+      "source": "notes/knowledge-graph-architecture-for-company-ai-semantic-retrieval-relationships-and-self-improving-loops",
+      "target": "wiki/ai-ml"
+    },
+    {
+      "source": "notes/knowledge-graph-architecture-for-company-ai-semantic-retrieval-relationships-and-self-improving-loops",
+      "target": "wiki/architecture"
+    },
+    {
+      "source": "notes/company-ai-knowledge-agent-multi-agent-news-research-pipeline-with-budget-controls",
+      "target": "wiki/ai-ml"
+    },
+    {
+      "source": "notes/company-ai-knowledge-agent-multi-agent-news-research-pipeline-with-budget-controls",
+      "target": "wiki/architecture"
+    },
+    {
+      "source": "notes/building-a-personal-ai-thinking-partner-optimising-for-staying-human-not-for-speed",
+      "target": "wiki/ai-ml"
+    },
+    {
+      "source": "notes/building-a-personal-ai-thinking-partner-optimising-for-staying-human-not-for-speed",
+      "target": "wiki/learning"
+    },
+    {
+      "source": "notes/building-a-personal-ai-thinking-partner-optimising-for-staying-human-not-for-speed",
+      "target": "wiki/side-projects"
+    },
+    {
+      "source": "notes/building-a-company-second-brain-taxonomy-driven-knowledge-with-ai-agents",
+      "target": "wiki/ai-ml"
+    },
+    {
+      "source": "notes/building-a-company-second-brain-taxonomy-driven-knowledge-with-ai-agents",
+      "target": "wiki/architecture"
+    },
+    {
+      "source": "notes/building-a-company-second-brain-taxonomy-driven-knowledge-with-ai-agents",
+      "target": "wiki/product-thinking"
+    },
+    {
+      "source": "notes/sanity-s-content-lake-cqrs-architecture-content-os-pivot-pm-interview-prep",
+      "target": "wiki/ai-ml"
+    },
+    {
+      "source": "notes/sanity-s-content-lake-cqrs-architecture-content-os-pivot-pm-interview-prep",
+      "target": "wiki/architecture"
+    },
+    {
+      "source": "notes/sanity-s-content-lake-cqrs-architecture-content-os-pivot-pm-interview-prep",
+      "target": "wiki/product-thinking"
+    },
+    {
+      "source": "notes/sanity-s-content-lake-cqrs-architecture-content-os-pivot-pm-interview-prep",
+      "target": "wiki/cloud-infra"
+    },
+    {
+      "source": "notes/bff-implementation-web-vs-mobile-response-shaping-with-shared-api-gateway-middleware",
+      "target": "wiki/architecture"
+    },
+    {
+      "source": "notes/bff-architecture-pattern-client-specific-api-layers-between-frontend-and-backend-services",
+      "target": "wiki/architecture"
+    },
+    {
+      "source": "notes/being-ai-native-means-workflow-readiness-not-doing-everything-with-ai",
+      "target": "wiki/product-thinking"
+    },
+    {
+      "source": "notes/being-ai-native-means-workflow-readiness-not-doing-everything-with-ai",
+      "target": "wiki/ai-ml"
+    },
+    {
+      "source": "notes/structured-documentation-for-ai-assisted-engineering-adr-prd-and-bdd",
+      "target": "wiki/ai-ml"
+    },
+    {
+      "source": "notes/structured-documentation-for-ai-assisted-engineering-adr-prd-and-bdd",
+      "target": "wiki/architecture"
+    },
+    {
+      "source": "notes/llm-agent-coding-behavioral-guidelines-think-first-minimalism-surgical-changes-goal-driven-execution",
+      "target": "wiki/ai-ml"
+    },
+    {
+      "source": "notes/llm-agent-coding-behavioral-guidelines-think-first-minimalism-surgical-changes-goal-driven-execution",
+      "target": "wiki/architecture"
+    },
+    {
+      "source": "notes/karpathy-s-llm-wiki-reference-gist-on-language-models",
+      "target": "wiki/ai-ml"
+    },
+    {
+      "source": "notes/claude-code-mcp-three-scope-levels-and-config-storage",
+      "target": "wiki/ai-ml"
+    },
+    {
+      "source": "notes/four-ways-to-use-claude-from-chat-user-to-api-builder",
+      "target": "wiki/ai-ml"
+    },
+    {
+      "source": "notes/four-ways-to-use-claude-from-chat-user-to-api-builder",
+      "target": "questions/what-are-the-key-goals-and-workflows-for-using-claude-effectively"
+    },
+    {
+      "source": "notes/claude-customization-layers-from-system-prompt-to-ui-settings",
+      "target": "wiki/ai-ml"
+    },
+    {
+      "source": "notes/claude-customization-layers-from-system-prompt-to-ui-settings",
+      "target": "questions/what-are-the-key-goals-and-workflows-for-using-claude-effectively"
+    },
+    {
+      "source": "notes/claude-skill-system-skill-md-format-locations-and-types",
+      "target": "wiki/ai-ml"
+    },
+    {
+      "source": "notes/claude-prototyping-to-production-workflow",
+      "target": "wiki/ai-ml"
+    },
+    {
+      "source": "notes/claude-prototyping-to-production-workflow",
+      "target": "questions/what-are-the-key-goals-and-workflows-for-using-claude-effectively"
+    }
+  ],
+  "bodies": {
+    "wiki/ai-ml": "## Summary\nThe AI / ML topic captures knowledge about Claude's usage patterns, customisation architecture, development workflows, and behavioural guidelines for LLM-driven coding. It also covers the emerging practice of using Claude as a personalised AI thinking partner optimised for maintaining human judgment, and how to build multi-agent organisational knowledge systems with taxonomy-driven semantics, budget controls, structured retrieval, and self-improving loops. AI as a personal and organisational capability multiplier bridges Conway's Law silos through shared ontology and composable tooling. A role-based skill map grounds the topic in concrete PM-facing capabilities. This cycle adds two agent-infrastructure frameworks: MASTRA, a TypeScript-native library for building agents and deterministic workflows, and Temporal, a durable-execution platform increasingly used to orchestrate long-running, crash-resilient AI agent loops.\n## Key Insights\n- Claude has four usage modes: end user (chat), Claude Code builder, API builder, and automation of recurring workflows.\n- MCP tools have three scopes: user (global, in ~/.claude.json), local (per-user per-project), project (shared via .mcp.json in git).\n- Customisation hierarchy: System Prompt (API) → Project Instructions (claude.ai) → User Preferences → Custom Styles → MCP Tools.\n- Skills are either Capability Uplift (grant new tools, need code execution + SKILL.md + scripts/) or Encoded Preference (behaviour patterns, SKILL.md only).\n- Recommended workflow: prototype in claude.ai → implement in Claude Code → persist decisions to CLAUDE.md. Project Instructions are rough drafts for system prompts.\n- LLM coding behavioural guidelines (from Karpathy's CLAUDE.md): think first and surface tradeoffs, write minimum viable code, make surgical changes only, define verifiable success criteria for goal-driven execution.\n- Karpathy's LLM Wiki gist is a reference resource on language model concepts, complementing the behavioural guidelines above.\n- Structured documentation (ADR, PRD, BDD with Cucumber) is the primary control surface for autonomous AI agents: ADRs define architectural boundaries enforced by CI, PRDs preserve feature intent, and BDD specs bridge requirements and code in human-readable form.\n- Being AI-native is about workflow readiness and context accessibility — structuring meetings, decisions, and tools so AI can participate programmatically — not about doing everything with AI. The key question: \"can this be optimised with AI?\"\n- At the product/platform level, Sanity's MCP-based \"Content OS\" strategy: AI agents read/write directly against a defined schema instead of parsing unstructured text.\n- A practical human-in-the-loop AI pattern: an event-driven trigger fires an automated agent action (e.g. AI translation) into a staging area, where a human reviews and publishes — combining automation speed with a quality gate.\n- Suggested KPI for AI-tooling adoption: track the ratio of agent/programmatic mutations vs. manual UI mutations alongside the mutation error rate, so adoption gains aren't measured in isolation from quality.\n- CLAUDE.md as a personal profile: beyond describing a project, CLAUDE.md can describe *who you are* — your mindset, communication style, how you like to interact — turning it into a persistent self-portrait for the AI to reference each session.\n- Giving an AI an identity (a name, a persona) shifts the dynamic from instruction-giving to genuine conversation — enabling productive pushback and challenge. The user stops commanding and starts dialoguing.\n- Memory tracking as a practice: explicitly asking Claude to observe how you make decisions, communicate, and push back builds a longitudinal self-knowledge layer that deepens the thinking-partner dynamic over time.\n- Morning skill pattern: a daily skill that reviews goals, to-dos, calendar, and Slack to flag gaps between stated priorities and actual time allocation — a systemic check against autopilot behaviour.\n- Build your AI system from the inside out: rather than replicating others' workflows, start from your own thinking style and needs. Using Claude to learn about Claude (asking the AI to explain itself) is a high-leverage meta-learning technique.\n- The \"staying human\" frame produces fundamentally different AI systems than optimising for speed: the design goal becomes maintaining judgment, staying in the lead, and ensuring AI pushes the human rather than replacing them.\n- Taxonomy as a JSON file for agents: define a domain's semantics in a small structured file and inject it into agent prompts to anchor AI on the right meaning (e.g. \"mobility\" = urban transport, not HR recruitment) — lightweight but highly effective.\n- Two-agent architecture for knowledge systems: a monitoring/ingestion agent and a deep-research/maintenance agent separate concerns cleanly — separation of concerns applied to agent roles.\n- Knowledge curation loop: agents must actively curate, validate quality, and maintain relevance; unmanaged knowledge becomes unreliable within weeks.\n- Using AI as a mirror: repeated personalised AI use teaches you about your own thinking patterns, decision-making, and communication style — value flows in both directions.\n- Budget-constrained autonomous agent execution: a daily spending cap (e.g. $20/day autonomous, $100+/day user-directed) governs when the system escalates to more expensive inference. Model selection scales with task: Haiku for classification, Sonnet for standard reasoning, Opus for deep research.\n- Source validation protocol for AI knowledge agents: before storing any insight, validate URL reachability, check for hallucination, test paywall access, and verify the source actually contains the claimed claim.\n- Temperature tagging for knowledge freshness: each stored insight is tagged with a review cadence (daily for breaking stories, every 6 months for stable regulations). This prevents stale knowledge accumulation without over-fetching.\n- Ambient Slack capture: agents can monitor team communication channels and quietly ingest dropped reports or links, making knowledge capture a background ambient process rather than a deliberate user action.\n- Knowledge graph over flat rows: storing knowledge with typed relationship edges (funded by, piloted by, related to) rather than as isolated entries enables graph traversal and organic semantic clustering around active research domains.\n- Self-improving knowledge gap loop: the system actively identifies what it doesn't yet know, fires new research searches to fill gaps, and updates itself — the knowledge base evolves without requiring user direction.\n- AI as a personal and organisational capability multiplier: AI augments human potential in both personal (learning, emotional regulation) and organisational (shared context, information flow, internal tooling) dimensions — not just automates tasks.\n- Build-to-learn principle: AI guides the learning path but the human types and builds — avoiding passive vibe-coding and ensuring genuine skill acquisition through active engagement.\n- Company brain via shared ontology: an organisation-wide shared language and ontology, combined with AI agents as \"remote teammates,\" enables better cross-departmental information flow and bridges Conway's Law silos.\n- SaaS is shifting from ready-built software to composable lego pieces — companies increasingly assemble their own AI-enabled stacks from primitives rather than buying complete solutions.\n- Role-specific AI skill map for PMs: AI-driven user research synthesis, automated competitive intelligence, predictive product analytics, intelligent roadmap prioritisation, automated prototype/wireframe generation, AI-enhanced multivariate A/B testing, and natural-language-to-structured-PRD generation from meeting transcripts — framed as table-stakes rather than specialist skills.\n- MASTRA is a TypeScript-native, open-source (Apache 2.0) agent framework distinguishing autonomous **agents** (LLM decides its own tool/call sequence) from deterministic **workflows** (explicit, code-controlled execution order) — the same agent-vs-workflow split shows up across the emerging agent-framework landscape.\n- A unified model router (MASTRA) lets provider swaps become config changes rather than rewrites — one interface across dozens of LLM providers.\n- Framework-as-library model: MASTRA is imported directly into your app rather than run as a hosted SaaS — you own the infrastructure, and can embed the agent in-process or run it as a standalone service.\n- Temporal is a durable-execution platform: it persists an immutable Event History and replays it on recovery, guaranteeing a workflow resumes exactly where it left off after a crash, network outage, or worker failure — with no LLM re-execution of already-completed steps.\n- Temporal's determinism split maps cleanly onto agent loops: the **workflow** is the deterministic orchestration/loop structure, while each **activity** (LLM call, tool invocation, DB query) is the non-deterministic, retryable unit of work — durability without re-paying for repeated model calls.\n- Choosing an orchestration substrate for agents is a real architectural decision: Temporal (code-first, tight orchestration/business-logic coupling, natural for agent loops) vs. Conductor-style declarative DSLs (orchestration separated from services, better for polyglot microservice coordination).\n## Open Questions\nNone — the previously open question has been answered and closed.\n## Sources\n- [Claude Code MCP: Three Scope Levels and Config Storage](https://app.notion.com/p/37359bb53cde813a9925d096d2230707)\n- [Four Ways to Use Claude: From Chat User to API Builder](https://app.notion.com/p/37359bb53cde8151b815d429faa18953)\n- [Claude Customization Layers: from System Prompt to UI Settings](https://app.notion.com/p/37359bb53cde81c6b03adc58a4993316)\n- [Claude Skill System: SKILL.md Format, Locations, and Types](https://app.notion.com/p/37359bb53cde81cbaaccddc2ca757f0b)\n- [Claude Prototyping-to-Production Workflow](https://app.notion.com/p/37359bb53cde81e583b7d362597841eb)\n- [LLM agent coding behavioral guidelines: think first, minimalism, surgical changes, goal-driven execution](https://app.notion.com/p/37359bb53cde8194a2eada3746041d07)\n- [Karpathy's LLM Wiki — reference gist on language models](https://app.notion.com/p/37359bb53cde81ee865dc3ca9cc79768)\n- [Structured Documentation for AI-Assisted Engineering: ADR, PRD, and BDD](https://app.notion.com/p/37559bb53cde81349847ec144c4e2462)\n- [Being AI-native means workflow readiness, not doing everything with AI](https://app.notion.com/p/37959bb53cde8197adb2e7cf27f1f37d)\n- [Sanity's Content Lake: CQRS architecture & 'Content OS' pivot (PM interview prep)](https://app.notion.com/p/37e59bb53cde81a89759ea3c7e0bf73e)\n- [Building a personal AI thinking partner: optimising for staying human, not for speed](https://app.notion.com/p/38259bb53cde812c8e78cec58154619e)\n- [Building a company second brain: taxonomy-driven knowledge with AI agents](https://app.notion.com/p/38259bb53cde8125a5a5c197973ac87f)\n- [Company AI Knowledge Agent: Multi-Agent News & Research Pipeline with Budget Controls](https://app.notion.com/p/38459bb53cde8151bb49f9a0d9214a52)\n- [Knowledge Graph Architecture for Company AI: Semantic Retrieval, Relationships, and Self-Improving Loops](https://app.notion.com/p/38459bb53cde812a83e4d1e13532ba7c)\n- [Personal AI Thinking Partner: CLAUDE.md as Self-Portrait, Reflective Skills, and the Pippi Model](https://app.notion.com/p/38459bb53cde818e85dff191dfc00e5a)\n- [AI as Human Capability Multiplier: Learning and Organizational Intelligence](https://app.notion.com/p/38559bb53cde81728d16ea7b3b816d14)\n- [7 AI skills PMs should master before 2027 (Medium clip)](https://app.notion.com/p/3a759bb53cde813e87e4c29c57591022)\n- [MASTRA: TypeScript-native AI agent framework](https://app.notion.com/p/3c359bb53cde8124bf8befcc5a0c643a)\n- [Temporal: durable execution for AI agent orchestration](https://app.notion.com/p/3c359bb53cde8127b3c6e86788171412)\n",
+    "wiki/architecture": "## Summary\nThe architecture topic covers three threads: (1) structural and behavioural design principles for software systems built with or guided by LLMs; (2) concrete API architecture patterns, specifically the Backend-for-Frontend (BFF) pattern for serving multiple client types from a shared backend; and (3) real-world examples of CQRS and knowledge-system architectures that enforce separation of concerns at the data and agent levels. An organisational systems lens frames the company brain as an architectural pattern, where a shared ontology enables AI agents to bridge Conway's Law silos. This cycle adds durable execution as a fourth thread: Temporal's event-sourced, crash-resilient orchestration model, evaluated specifically as a substrate for long-running AI agent loops.\n## Key Insights\n- Think before coding: state assumptions explicitly, surface tradeoffs, ask when confused rather than guessing silently.\n- Simplicity first: write the minimum code that solves the problem — no speculative features, no abstractions for single-use code, no unrequested error handling.\n- Surgical changes: touch only what you must — don't improve adjacent code, don't refactor things that aren't broken, match existing style.\n- Goal-driven execution: transform vague tasks into verifiable goals; define success criteria upfront to enable independent looping without constant clarification.\n- ADR (Architecture Decision Record) is not just documentation — it is an enforcement tool: CI pipelines reject commits that violate architectural boundaries and redirect agents back to the relevant ADR to learn and fix.\n- PRD + BDD with Cucumber creates a continuous chain from product intent to executable specs to code, keeping both humans and AI aligned weeks after the original decision was made.\n- Design systems with strict component rules constrain AI-generated UIs, preventing visual chaos and ensuring predictable, composable layouts.\n- The Backend for Frontend (BFF) pattern adds a client-specific API aggregation layer (web BFF, mobile BFF) that sits behind a shared API Gateway and in front of core backend microservices.\n- Web BFFs return full, richly-shaped data (pagination, SEO metadata, recommendations), while Mobile BFFs return compact, cached, minimal payloads (Redis caching, offline support).\n- The API Gateway/middleware layer owns cross-cutting concerns (auth, rate limiting, logging/tracing, compression), while each BFF owns client-specific data shaping — a clean separation of concerns.\n- CQRS in practice: Sanity's Content Lake separates the write path (PostgreSQL as an immutable, append-only ACID ledger) from the read path (Elasticsearch inverted index); PostgreSQL is never queried for reads.\n- Referential integrity without SQL joins: documents reference each other via typed pointer objects, enabling graph traversal while schema validation lives upstream in code.\n- A confirmed write triggers async replication/broadcast (e.g. via Pub/Sub) to update search indexes and invalidate edge caches — decoupling write latency from read-side consistency propagation.\n- The same client/concern-separation principle from BFFs reappears in asset pipelines: binary payloads go to object storage with CDN-based on-the-fly transforms, while structured text/metadata flows through the core JSON + search pipeline.\n- A small JSON taxonomy file acts as a semantic configuration layer for AI agents: by defining domain-specific meanings (e.g. \"mobility\" = urban transport, not HR recruitment), it constrains interpretation without embedding a full ontology in the prompt.\n- Two-agent specialisation mirrors microservice decomposition: a monitoring/ingestion agent (Pulse) and a deep-research/maintenance agent separate concerns cleanly and outperform a single general-purpose agent.\n- Ontology provides the relational layer that taxonomy alone cannot: knowledge graphs capture how pieces relate, not just what they are — taxonomy gives structure, ontology gives meaning.\n- Active curation is an architectural requirement, not an afterthought: knowledge bases without a maintenance loop degrade to noise within weeks. The curation loop is a first-class architectural concern.\n- Voyage + Supabase as a concrete RAG stack: Voyage embeddings for semantic chunking, Supabase for storage — a practical, low-overhead implementation for domain-specific knowledge retrieval by meaning rather than keyword.\n- Budget-managed agent execution: daily spending controls (e.g. $20/day autonomous vs. $100+/day user-directed) are an architectural boundary that determines which inference tier the system uses autonomously. Model selection scales with task: Haiku for classification, Sonnet for standard reasoning, Opus for deep research.\n- Knowledge graph as a storage primitive: typed edges between knowledge nodes (funded by, piloted by, related to) are first-class schema citizens — they enable organic cluster formation around active research domains and graph traversal queries.\n- Self-improving gap loop as a systemic architectural requirement: the pattern (identify what the system doesn't know → fire new searches → fill gaps → re-synthesise) prevents knowledge decay regardless of ingestion quality.\n- Company brain as an architectural pattern: an organisation-wide shared ontology/language, combined with AI agents that have programmatic access to context, enables cross-departmental information flow and bridges Conway's Law silos — the architecture of organisational intelligence.\n- Composable software stacks: as SaaS moves from ready-built applications to assembling lego-piece primitives, companies must architect for composition — each AI-enabled building block should be combinable with others to assemble a custom internal stack.\n- Temporal is a durable-execution platform: three components — a backend Temporal Service (Event History as source of truth), a lightweight Client SDK embedded in your app, and Workers that execute workflow/activity code in your own infrastructure — and either self-hosted or run as Temporal Cloud.\n- Determinism is the core architectural constraint: Workflow code must be deterministic (no direct clock reads, randomness, or I/O) so it can be replayed from Event History after a crash; all non-deterministic work (LLM calls, API calls, DB queries) is pushed into retryable, idempotent Activities whose results are cached in the event log rather than re-executed on replay.\n- Incremental adoption pattern for existing systems: embed the Temporal Client in the unchanged app, extract only long-running/failure-prone processes (order processing, onboarding, multi-step async jobs) into Workflows/Activities run by separate Workers — real-time and synchronous request paths stay untouched.\n- Temporal maps naturally onto AI agent loops: the workflow is the deterministic loop/decision structure, the LLM call and tool execution are Activities — giving durability across worker crashes and avoiding re-paying for already-completed LLM calls on replay.\n- Orchestration-substrate choice is itself an architectural decision: Temporal's code-first model (tight orchestration/business-logic coupling, natural for single-language agent loops) trades off against declarative DSL engines like Conductor (orchestration externalised from services, better suited to polyglot microservice coordination).\n## Open Questions\nNone.\n## Sources\n- [LLM agent coding behavioral guidelines: think first, minimalism, surgical changes, goal-driven execution](https://app.notion.com/p/37359bb53cde8194a2eada3746041d07)\n- [Structured Documentation for AI-Assisted Engineering: ADR, PRD, and BDD](https://app.notion.com/p/37559bb53cde81349847ec144c4e2462)\n- [BFF Architecture Pattern: Client-Specific API Layers Between Frontend and Backend Services](https://app.notion.com/p/37a59bb53cde8130b74ed0cbf71b3b26)\n- [BFF Implementation: Web vs Mobile Response Shaping with Shared API Gateway Middleware](https://app.notion.com/p/37a59bb53cde81e1b7b3e7a5b1961c1d)\n- [Sanity's Content Lake: CQRS architecture & 'Content OS' pivot (PM interview prep)](https://app.notion.com/p/37e59bb53cde81a89759ea3c7e0bf73e)\n- [Building a company second brain: taxonomy-driven knowledge with AI agents](https://app.notion.com/p/38259bb53cde8125a5a5c197973ac87f)\n- [Company AI Knowledge Agent: Multi-Agent News & Research Pipeline with Budget Controls](https://app.notion.com/p/38459bb53cde8151bb49f9a0d9214a52)\n- [Knowledge Graph Architecture for Company AI: Semantic Retrieval, Relationships, and Self-Improving Loops](https://app.notion.com/p/38459bb53cde812a83e4d1e13532ba7c)\n- [AI as Human Capability Multiplier: Learning and Organizational Intelligence](https://app.notion.com/p/38559bb53cde81728d16ea7b3b816d14)\n- [Temporal: durable execution for AI agent orchestration](https://app.notion.com/p/3c359bb53cde8127b3c6e86788171412)\n",
+    "wiki/product-thinking": "## Summary\nThe product thinking topic captures strategic and philosophical perspectives on AI adoption alongside concrete PM framing for positioning and measuring AI-driven products. Core themes: being AI-native is about workflow readiness, not \"AI for AI's sake\"; strong PM strategy reframes platforms around ecosystem-wide value with KPIs that pair efficiency against quality/trust; and the design goal you choose for an AI product — staying human vs. maximising speed — determines the entire interaction model. Two dimensions are well-covered: personal AI assistants designed for judgment and identity, and taxonomy-driven company knowledge systems designed for domain reliability. AI as an organisational capability layer improves cross-department information flow and accelerates a broader industry shift toward composable tooling. A new addition this cycle brings a role-specific lens: the concrete AI skill areas (research synthesis, predictive analytics, roadmap prioritisation, and more) PMs are expected to build fluency in as table-stakes capability.\n## Key Insights\n- Being AI-native does not mean doing everything with AI; it means structuring workflows so the switch to AI-assisted execution is possible and smooth.\n- AI-native readiness involves: recording meetings, writing decision documents, and capturing context in structured ways so AI agents can access the right information programmatically.\n- The right question to ask is not \"should we use AI?\" but \"can this be optimised with AI?\" — evaluate AI fairly as a technology option alongside others.\n- Market positioning shifts happen when a category commoditises: Sanity is moving from \"Headless CMS\" to a \"Content Operating System for the AI Era\" to escape the commodity trap and target higher-value enterprise budgets.\n- Effective PM framing treats a platform as an organisation-centric ecosystem rather than a project-centric one — balancing developer-facing metrics (velocity, API performance) against non-technical user metrics (time-to-publish, less out-of-system drafting).\n- Architectural choices can be argued in product terms: choosing Postgres-as-ledger + Elasticsearch-as-index over MongoDB resolves the tension between transactional/auditable writes and instantly-scalable reads.\n- A practical AI-strategy KPI pairs adoption (ratio of automated vs. manual actions) with quality/trust (error rates) — adoption alone isn't success if it degrades reliability.\n- The design north star determines the product: \"stay human\" (maintain judgment, keep humans in the lead) vs. \"maximise speed\" produces fundamentally different AI products — interaction model, UX, and success metrics all diverge.\n- Identity as a product feature: when users give an AI a name and a character description, they shift from commanding to conversing — a meaningful UX state change that increases engagement depth and quality.\n- Personalisation surface: a CLAUDE.md-style personal profile (describing thinking style, communication preferences, decision patterns) is a lightweight but high-value configuration surface for AI products.\n- Taxonomy-driven knowledge management as a product: giving domain workers a small JSON taxonomy file to configure AI's semantic understanding is a low-friction, high-signal personalisation lever.\n- The curation loop as a product responsibility: AI knowledge bases require ongoing agent-driven maintenance, not just initial ingestion — this is a product feature and a reliability concern, not an ops afterthought.\n- AI as organisational intelligence layer: enables better cross-departmental information flow by bridging Conway's Law silos — AI agents act as \"remote teammates\" that span departmental boundaries.\n- SaaS is shifting from ready-built software to composable lego pieces: companies now assemble custom AI-enabled stacks from primitives rather than buying complete solutions — a structural shift in the software market.\n- Better shared context as an organisational design goal: establishing a shared language/ontology at company level, combined with programmatic AI access, multiplies team effectiveness and reduces communication overhead.\n- The AI skill gap is the opportunity: most companies plan to integrate AI into product development, but few PMs feel confident using AI beyond basic chat queries — fluency in *directing* AI tools at product problems (not becoming a data scientist) is framed as the differentiating skill, valued at a measurable hiring premium.\n## Open Questions\nNone.\n## Sources\n- [Being AI-native means workflow readiness, not doing everything with AI](https://app.notion.com/p/37959bb53cde8197adb2e7cf27f1f37d)\n- [Sanity's Content Lake: CQRS architecture & 'Content OS' pivot (PM interview prep)](https://app.notion.com/p/37e59bb53cde81a89759ea3c7e0bf73e)\n- [Building a company second brain: taxonomy-driven knowledge with AI agents](https://app.notion.com/p/38259bb53cde8125a5a5c197973ac87f)\n- [AI as Human Capability Multiplier: Learning and Organizational Intelligence](https://app.notion.com/p/38559bb53cde81728d16ea7b3b816d14)\n- [7 AI skills PMs should master before 2027 (Medium clip)](https://app.notion.com/p/3a759bb53cde813e87e4c29c57591022)\n",
+    "wiki/cloud-infra": "## Summary\nThe cloud / infra topic is newly seeded by a deep-dive into Sanity's Content Lake infrastructure, which combines managed databases, search indexes, object storage, and CDN edge caching on Google Cloud to power a CQRS content platform. It's an initial reference point for composing a data/content platform from cloud-managed building blocks with clear read/write separation.\n## Key Insights\n- Write path: PostgreSQL on Google Compute Engine (GCE) acts as the immutable, append-only source-of-truth ledger for all mutations (ACID-compliant, full history retained).\n- Read path: Elasticsearch serves all queries via an inverted index; PostgreSQL is never woken up for reads, enabling fast filter/intersection queries without table scans.\n- Sync/propagation: a GKE compute layer replicates Postgres writes to Elasticsearch and broadcasts change events via Google Cloud Pub/Sub to invalidate edge caches globally.\n- Binary assets (images, video) are offloaded to Google Cloud Storage (GCS) buckets, with a lightweight reference pointer stored in the core datastore; GKE asset workers extract metadata (dimensions, colour palette, low-quality placeholders).\n- On-the-fly asset transforms (e.g. resize/format query params) are handled by a serverless image-processing microservice at the Cloud CDN edge on a cache miss, with results cached for subsequent requests.\n## Open Questions\nNone.\n## Sources\n- [Sanity's Content Lake: CQRS architecture & 'Content OS' pivot (PM interview prep)](https://app.notion.com/p/37e59bb53cde81a89759ea3c7e0bf73e)\n",
+    "wiki/learning": "## Summary\nThe learning topic covers deliberate skill and knowledge development — particularly the reflective and meta-cognitive practices that enable deep learning rather than rapid throughput. Key themes include the build-to-learn principle (active engagement over passive AI consumption), structured AI-guided learning flows, and the design of custom teaching tools. A foundational risk is adopting others' frameworks without internalising them: true learning comes from building knowledge from the inside out, grounded in personal experience and thinking style.\n## Key Insights\n- Build from the inside out: replicate others' AI workflows only to understand the space, then construct your own approach from your own priorities and cognitive style — not from others' templates.\n- Meta-learning via Claude: asking the AI to explain itself is a high-leverage technique. Claude can narrate its own reasoning, constraints, and design — turning the tool into a learning resource about the tool.\n- Writing and blogging as a forcing function: slowing down the \"build build build\" cadence to reflect, connect dots, and share the journey is essential for depth. It lifts your head from execution mode into synthesis mode.\n- Token limits as an unexpected learning mechanism: running out of context forces reconnection with the real world and prevents endless AI-assisted tunneling into a single problem frame.\n- CLAUDE.md as a reflective exercise: writing a personal profile for your AI (your thinking style, communication preferences, interaction patterns) is itself a self-clarifying and identity-building practice — not just a configuration file.\n- Build-to-learn principle: AI guides the learning path (e.g. via a /learn skill), but the human types and builds — avoiding passive vibe-coding and ensuring genuine skill acquisition through active engagement.\n- /learn skill as a structured AI-guided learning flow: a dedicated skill that structures a learning session around a topic, providing guided progression while keeping the human in the driver's seat.\n- Code mastery check via AI scaffolding: use AI to scaffold initial understanding, then verify your own comprehension independently — the human validates knowledge rather than delegating it.\n- Custom teaching tools: build personalised learning tools tailored to individual goals and learning styles, rather than relying on generic AI tutoring modes.\n## Open Questions\nNone.\n## Sources\n- [Building a personal AI thinking partner: optimising for staying human, not for speed](https://app.notion.com/p/38259bb53cde812c8e78cec58154619e)\n- [AI as Human Capability Multiplier: Learning and Organizational Intelligence](https://app.notion.com/p/38559bb53cde81728d16ea7b3b816d14)\n",
+    "wiki/side-projects": "## Summary\nThe side-projects topic covers personal projects built for exploration, learning, and individual use — distinct from work products or commercial ventures. The defining characteristic is building for yourself with full freedom to define the goal. Two notes now seed this topic: building a personalised AI thinking partner as an iterative side project, with strong emphasis on both the design north star (staying human, not maximising speed) and the concrete skill architecture that makes the philosophy practically useful day-to-day.\n## Key Insights\n- \"Pippi\" as a replicable template: building a named, characterised personal AI assistant is a tractable and rewarding side project. The starting point is a CLAUDE.md file that describes *you* — your mindset, interaction style, and priorities.\n- The design north star determines the outcome: building for \"stay human\" and \"maintain judgment\" produces a radically different project than building for \"automate for speed.\" Choose your frame deliberately.\n- Sharing and iteration loops accelerate the project: blogging the journey, showing demos, and inviting others to copy/adapt your setup creates a feedback community and keeps momentum.\n- Early phase = exploration: start by replicating others' setups to understand the space, then pivot to building your own from the inside out once you know what you actually need.\n- \"Mindprint\" as a low-friction entry point: 13 reflective questions about how you think and work → AI analyses answers and generates a personalised CLAUDE.md starter, reducing the blank-page barrier to starting the project.\n- Named reflective skills as project deliverables: GrowthMD (reads mistake log + goals + past sessions → tough love reflection on gaps between stated priorities and actual behaviour) and LoveMD (celebrates visible growth, run on Fridays or before vacations) give the project concrete, named artefacts with clear use cases.\n- Morning accountability skill: a daily skill that reviews goals, to-do list, Slack, and calendar to flag misalignment between stated priorities and actual time allocation — the automation that makes \"staying human\" practical rather than aspirational.\n- Correction loop as the learning mechanism: each time AI does something unintentional, logging the correction and feeding it back into CLAUDE.md turns errors into refinement inputs — the project improves with use, compounding over time.\n## Open Questions\nNone.\n## Sources\n- [Building a personal AI thinking partner: optimising for staying human, not for speed](https://app.notion.com/p/38259bb53cde812c8e78cec58154619e)\n- [Personal AI Thinking Partner: ](https://app.notion.com/p/38459bb53cde818e85dff191dfc00e5a)[CLAUDE.md](http://CLAUDE.md)[ as Self-Portrait, Reflective Skills, and the Pippi Model](https://app.notion.com/p/38459bb53cde818e85dff191dfc00e5a)\n",
+    "notes/mastra-typescript-native-ai-agent-framework": "**Date**: August 21, 2026\n## Overview\nMASTRA is an open-source TypeScript framework for building AI agents, created by the Gatsby team. It graduated from Y Combinator (W25, $13M) and hit v1.0 in January 2026.\n## Core Architecture\n### Primitives\n- `createAgent` - Autonomous agents that decide their own call sequence\n- `createTool` - Define reusable tools agents can use\n- `createWorkflow` - Deterministic pipelines with explicit control flow\n### Agent vs Workflow\n- **Agents**: Autonomous—LLM decides which tools to use and when to iterate\n- **Workflows**: Deterministic—you control execution order, branching, and parallelism\n## Key Features\n### Model Router\n- Connects to 100s of models across dozens of providers (OpenAI, Anthropic, Azure, Google, Ollama)\n- Single interface—provider swaps are config changes, not rewrites\n### Memory & State\n- Observational memory persists conversation context across sessions\n- Learns about users automatically\n- Ranges from basic message persistence to advanced state tracking\n### Production Features\n- Guardrails for input/output sanitization (prevent prompt injection)\n- Human-in-the-loop approval for tool calls\n- Native MCP support\n- LangSmith-compatible OpenTelemetry tracing\n- Mastra Studio for local development & inspection\n### Deployment\n- Runs on any Node.js environment\n- First-class support: Vercel, Netlify, Cloudflare\n- Can integrate with Next.js, Express, Hono, Fastify\n- Embedded (in-process) or standalone server modes\n## TypeScript vs Python Agents\n**TypeScript agents are NOT just for frontends**—this is a misconception.\n### Real distinction: Ecosystem fit, not architecture\n- **TypeScript**: Better for JavaScript-heavy teams, unified type system, tight web integration. MASTRA itself is backend-capable (Node.js).\n- **Python**: Mature ML/data infrastructure, better integrations with scientific libraries. Python agents trend backend because ML culture adopted it first.\n### Deployment options\n- **Embedded**: Agent runs in-process within your main Node.js app (lower latency, simpler)\n- **Standalone**: Separate service (easier scaling, independent updates)\n- **API**: Call via HTTP from anywhere\n## Framework Model\n**It's a library you import, not a SaaS service.**\nYou write TypeScript code that directly imports and uses MASTRA primitives. The framework handles LLM calls, tool orchestration, memory, and state. You own the infrastructure and deploy it.\n```typescript\nimport { createAgent, createTool } from '@mastra/core'\n\nconst myTool = createTool({ ... })\nconst myAgent = createAgent({\n  model: 'openai/gpt-4',\n  tools: [myTool]\n})\n\nconst result = await myAgent.run({ input: '...' })\n```\n## Licensing & Cost\n- **License**: Apache 2.0 (fully open source)\n- **Framework cost**: Free\n- **Actual cost**: Pay-as-you-go to LLM providers (OpenAI, Anthropic, etc.)\n- **Enterprise option**: RBAC, SSO, IAM, data isolation in VPC, flat annual fee\n## Adoption\nUsed by: Replit, SoftBank, PayPal, PLAID, Marsh McLennan\n## Key Takeaways\n1. TypeScript-native, production-grade agent framework\n2. Unified model router eliminates vendor lock-in\n3. Seamless embedding into existing Node.js apps\n4. Good choice if your team is JavaScript-heavy\n5. Free to use; only pay LLM providers\n",
+    "notes/temporal-durable-execution-for-ai-agent-orchestration": "# Temporal: Core Knowledge Extracted\n## What is Temporal?\nTemporal is a **durable execution platform** that guarantees workflow completion even after crashes, network outages, or infrastructure failures. It abstracts away the complexity of handling distributed systems failures.\n### Key Value Prop\n- Workflows run to completion regardless of failures\n- State persisted via Event History (immutable log)\n- Automatic replay on recovery (no context loss)\n- Scales horizontally across distributed systems\n## Architecture\n### Three Core Components\n1. **Temporal Service** (Backend)\n\t- Frontend Service: gRPC endpoint, auth, rate limiting\n\t- History Service: Records Event History (source of truth)\n\t- Matching Service: Manages Task Queues\n\t- Persistence Layer: Cassandra, MySQL, PostgreSQL, SQLite\n\t- Can be self-hosted OR use Temporal Cloud (SaaS)\n2. **Temporal Client** (SDK)\n\t- Embedded library in your app\n\t- Starts/signals/queries workflows\n\t- Never executes workflow code\n\t- Available in: Go, Java, TypeScript, Python, Ruby, .NET, PHP, Rust\n3. **Workers** (Your Infrastructure)\n\t- Execute workflow + activity code\n\t- Run in your environment (GCP, AWS, Lambda, etc.)\n\t- Poll Task Queues for work\n\t- Stateless and scalable\n## Execution Model\n### Workflows (Orchestration Logic)\n- Code-first (Python, Go, TypeScript, etc.)\n- **Must be deterministic** - same input + Event History = same path\n- Constraints: No direct Date.now(), random numbers, or external API calls\n- Can run for seconds to years\n- Automatic state recovery via Event History replay\n### Activities (Work Units)\n- Handle I/O: external APIs, DB queries, LLM calls, file ops\n- Non-deterministic (expected to vary)\n- Retryable with configurable backoff\n- Results cached in Event History (not re-executed on replay)\n- Support idempotency guarantees\n### Event History\n- Complete ordered log of everything that happened\n- Persisted to database\n- Used for replay to reconstruct state\n- Enables determinism + durability\n## Deployment Models\n### Option 1: Temporal Cloud (SaaS)\n- **Regions**: AWS (13) + GCP (6) + Azure (planned)\n- **Availability**: 99.9% SLA (standard) or 99.99% (HA)\n- **Latency**: P99 = 200ms per region\n- **Pricing**: Starting ~$200/month\n- **Features**: Multi-region replication, HA failover, cell-based isolation\n- **Your responsibility**: Workers only (run in your infrastructure)\n### Option 2: Self-Hosted\n- Run Temporal Server yourself\n- Full control over infra, database, scaling\n- Higher ops burden\n## For Existing SaaS Applications\n### Migration Architecture\n**NOT a full rewrite. Incremental extraction:**\n```javascript\nYour App (GCP/AWS/etc) - UNCHANGED\n├─ Embed Temporal Client library (tiny)\n├─ Call client.start_workflow() for long-running processes\n└─ Return workflow_id immediately (async)\n\nYour Workers (your infrastructure)\n├─ Extract workflow logic here\n├─ Poll Temporal Cloud for tasks\n└─ Execute Activities (LLM calls, API calls, DB queries)\n\nTemporal Cloud (managed)\n├─ Orchestrates execution\n├─ Persists state\n├─ Retries failures\n└─ Provides visibility/debugging UI\n```\n### What Gets Extracted\n✅ **To Temporal:**\n- Order processing (place → pay → ship → confirm)\n- User onboarding workflows\n- Payment reconciliation\n- Report generation\n- Multi-step async jobs with retries needed\n- Anything that can fail mid-process\n❌ **Stays in App:**\n- User-facing APIs/request handlers\n- Real-time features\n- Synchronous business logic\n- Authentication, authorization\n## Network Latency Impact\n**Latency Added**\n- Client → Temporal Cloud: 10-50ms typical, p99 ~200ms\n- Worker → Temporal Cloud: Same as above\n- Negligible for long-running workflows\n**When It Matters**\n✅ Not a problem: Order processing (already async), Agent loops (minutes+)\n❌ Could matter: Sub-100ms synchronous operations, real-time compute\n## AI Agent Orchestration\n### Why Temporal for AI Agents\n**Perfect for multi-turn LLM loops:**\n- Workflow = deterministic orchestration structure (loop, decision logic)\n- Activities = non-deterministic LLM calls + tool invocations\n- Automatic state preservation across crashes\n- No context loss on worker failure\n### Architecture Pattern\n```python\n@workflow.defn\nclass AgentWorkflow:\n    @workflow.run\n    async def run(self, user_request: str):\n        context = user_request\n        for turn in range(MAX_TURNS):  # deterministic loop\n            # Non-deterministic\n            llm_response = await workflow.execute_activity(call_llm, context)\n\n            # Deterministic\n            decision = parse_response(llm_response)\n\n            if decision == \"tool_use\":\n                # Non-deterministic\n                result = await workflow.execute_activity(execute_tool, ...)\n                context += result\n            elif decision == \"done\":\n                return llm_response\n```\n### Key Benefits\n- Durability across crashes (workflow resumes exactly where it left off)\n- Cost optimization (LLM results cached, no re-execution)\n- Multi-agent orchestration (child workflows, signals)\n- Full execution history for debugging + auditing\n- Ambient agents (run 24/7 via scheduling)\n## Temporal vs. Conductor (Netflix)\n### Core Difference: Code-First vs. Declarative\n**Temporal**\n- Workflows as Python/Go/TypeScript code\n- Event sourcing for state\n- Worker executes complete workflow code\n- Tight orchestration + business logic coupling\n- Natural for AI agents\n**Conductor**\n- Workflows as JSON DSL (external files)\n- Explicit database state management\n- Workers poll for individual tasks\n- Separation of orchestration from services\n- Better for polyglot microservice coordination\n### Choice Matrix\n**Use Temporal if:**\n- Building AI agents (loop patterns)\n- Code-first workflow expression feels natural\n- Primarily one language\n- Need tight integration + tight debugging\n**Use Conductor if:**\n- Orchestrating many polyglot services\n- Want orchestration logic separate from code\n- Teams prefer declarative/visual approach\n- Need to change orchestration without redeploying services\n## Implementation Path for Your Use Case\n1. **Identify long-running workflows** in current app\n2. **Create Temporal Client** in your app (single import)\n3. **Define Workflow** for each process (e.g., order processing)\n4. **Extract Activities** (LLM calls, tool invocations)\n5. **Deploy Workers** in same region as app (GCP Cloud Run/GKE)\n6. **Use Temporal Cloud** in same GCP region\n7. **Gradual rollout**: Use feature toggles to canary route traffic\n8. **Monitor**: Leverage Temporal UI for visibility\n## Cost Trade-offs\n**Temporal Cloud** (~$200-5k/month)\n- Managed infrastructure\n- SLA guarantees\n- Multi-region HA available\n- No ops burden\n**Self-Hosted** (~$2.5-4.5k/month infrastructure)\n- Full control\n- Higher ops complexity\n- Better for existing K8s infrastructure\n- Lower egress costs (internal deployment)\n## Key Constraints & Gotchas\n1. **Determinism** - Workflow code must be deterministic (biggest learning curve)\n2. **No direct I/O in Workflows** - All external calls must be Activities\n3. **Replay complexity** - Understanding Event replay needed for debugging\n4. **Versioning** - Workflow versioning required for safe deployments\n## Next Steps\n- Audit current app for long-running processes\n- Evaluate GCP region choice for Temporal Cloud\n- Start with 1-2 workflows (order processing, user onboarding)\n- Use Python SDK for fast iteration\n- Test latency impact in staging\n- Leverage Temporal Discord/community for support\n",
+    "notes/7-ai-skills-pms-should-master-before-2027-medium-clip": "Medium article by Mohit Aggarwal (Sep 27, 2025, ~4 min read). Framing stat: ~73% of companies plan to integrate AI into product development by 2027, but only ~23% of PMs feel confident using AI tools beyond basic ChatGPT queries — that gap is the opportunity.\n## 1. AI-Driven User Research & Insights\nAI can analyze thousands of interviews, support tickets, and feedback forms in minutes instead of weeks. Tools: Dovetail AI, UserVoice Analytics, Claude for research synthesis. Example cited: analyzing 2,000 support conversations dropped from ~3 weeks to ~2 hours, surfacing three pain points that shaped a Q3 roadmap.\n## 2. Automated Competitive Intelligence\nAI agents monitor competitor releases, pricing, and feature updates 24/7 and deliver daily briefings. Approach: scrape competitor data (Browse AI, Apify), feed into an LLM (Claude / GPT-4) for analysis.\n## 3. Predictive Product Analytics\nShift from descriptive (what happened) to predictive (what will happen) — ML models predicting feature adoption, churn risk, pricing sensitivity, and growth-driving segments. Claim cited: companies using predictive analytics see ~15% higher revenue growth than those relying on traditional metrics alone.\n## 4. Intelligent Roadmap Prioritisation\nFeed the model user-feedback sentiment scores, dev-effort estimates, business-impact projections, and market timing to produce data-backed prioritisation instead of long debate-driven meetings.\n## 5. Automated Prototype & Wireframe Generation\nGenerate wireframes from text descriptions and iterate on variations quickly. Tools: Uizard, Figma AI, Adobe Firefly. Prompt engineering for design tools is framed as its own distinct skill.\n## 6. AI-Enhanced A/B Testing\nRun multivariate tests with smaller samples and faster results; auto-generate many test variations (copy, colour, placement, size) at once rather than simple two-way tests. Netflix cited as running 250+ concurrent AI-driven tests.\n## 7. Natural Language Product Requirements\nTurn recorded stakeholder meetings into structured PRDs with acceptance criteria, user stories, and edge cases; AI flags inconsistencies and gaps humans miss. Tools: Otter.ai for transcription, then Claude / GPT-4 for structuring.\n## The Reality Check\n- These are becoming table-stakes skills; London tech firms reportedly hiring PMs with AI experience at ~20–30% salary premiums.\n- Goal isn't becoming a data scientist — it's fluency in *directing* AI tools at product problems.\n- Suggested start: pick one skill, 30 minutes daily for two weeks.\n- Bottom line as framed by the author: two types of PMs ahead — those who use AI, and those who work for those who do.\n*Clipped from Medium. Figures and anecdotes are the author's own claims, not independently verified.*\n",
+    "notes/ai-as-human-capability-multiplier-learning-and-organizational-intelligence": "Keynote notes: Better Human with the Help of AI\n**Personal dimension**\n- Better at not annoying the kids when growing old (emotional regulation aided by AI self-awareness)\n- Better at learning anything:\n\t- /learn skill — structured AI-guided learning flow\n\t- Learn by building: AI guides, but the human types — not passive vibe-coding\n\t- Vibe code + code mastery: use AI to scaffold, then verify your own understanding\n\t- Build custom teaching/learning tools tailored to personal goals\n**Organisational dimension**\n- Better shared context:\n\t- Ontology / shared language → Company shared brain\n\t- Better communication for hybrid teams: AI agents are now \"remote teammates\" present for everyone\n\t- Better information flow across departments, bridging Conway's Law — AI can translate across silos\n- Better internal tooling:\n\t- Shared context enables self-built tools that compound over time\n\t- SaaS is shifting from ready-built software to lego pieces — companies assemble their own stack\n",
+    "notes/personal-ai-thinking-partner-claude-md-as-self-portrait-reflective-skills-and-the-pippi-model": "A talk by the creator of the \"Pippi\" personal AI system. The core thesis: optimise for staying human and keeping judgment in the lead — not for speed or automation.\n## CLAUDE.md as self-portrait\nInstead of describing a project or codebase, use CLAUDE.md to describe *you*: how you think, what you need, where AI has let you down before, your communication style, your correction patterns. Each time AI does something unintentional, the correction becomes input for refining the file. The document evolves as a mirror of your cognitive style.\n## Key skills in the system\n- **GrowthMD**: reads the mistake log, CLAUDE.md, and past sessions → delivers \"tough love\" reflection on gaps between stated goals and actual behavior\n- **LoveMD**: celebrates visible growth; designed to run on Fridays or before vacations to make progress visible (humans naturally raise the bar and stop seeing their own growth)\n- **Morning skill**: reviews goals, todos, Slack, calendar → flags misalignment between stated priorities and how time is actually spent\n## Named AI identity (Pippi)\nGiving the AI a name and identity shifts the dynamic from issuing instructions to having conversations. You get challenged back. The relationship becomes one of dialogue, not command.\n## Memory tracking\nClaude is asked to track patterns: how decisions are made, when the user pushes back, communication quirks. These patterns feed back into the CLAUDE.md and become context for better future sessions.\n## Mindprint starter guide\n13 reflective questions about how you think and work → the AI analyses answers and generates a personalised CLAUDE.md. Two tracks:\n1. **Fresh start**: for those new to Claude Code\n2. **Cognitive layer**: add onto an existing Claude project without disrupting it\nGuide is free, public, and designed to be accessible without needing GitHub.\n- **CLAUDE.md as self-portrait:** Answer 13 structured questions about how you think and work. Claude analyses patterns and generates a CLAUDE.md file describing you — a starting point that evolves with use.\n- **Give the AI an identity:** Naming your AI (speaker calls theirs \"Pippi\") shifts the dynamic from instruction-giving to conversation. You stop commanding and start dialoguing — enabling productive challenge and pushback.\n- **Memory tracking:** Explicitly ask Claude to track how you make decisions, how you communicate, when you push back. These observations are fed back as reflections, deepening the thinking-partner dynamic over time.\n- **Morning skill:** A routine that reviews goals, to-do list, Slack, calendar, and any other relevant context to flag gaps between stated priorities and actual time allocation. Surfaces autopilot vs. conscious choices.\n- **Cognitive layer skills (Grow, Love):** Named skills for specific reflection modes.\n- **Intelligent friction (\"start a fight\"):** Deliberately ask for pushback on your thinking to build in adversarial reasoning.\n- **First correction pattern:** Ask Claude to flag patterns in your behaviour each time you interact, accumulating a longitudinal picture.\n## Meta-insight\nRepeatedly using a personalised AI doesn't just help you get things done — it teaches you about how you think, make decisions, and interact. The value compounds with usage depth, not just breadth.\n",
+    "notes/knowledge-graph-architecture-for-company-ai-semantic-retrieval-relationships-and-self-improving-loops": "Continuation of a talk on building a company AI brain (Data Mobility). Focuses on how knowledge is structured as a graph rather than a flat database, and how the system self-improves.\n## Graph over rows\nKnowledge is not stored as isolated entries but as nodes with typed relationships (funded by, piloted by, related to). Querying returns clusters, not lists. Example: searching \"Waymo\" surfaces technology, pilot cities, partnerships — the semantic neighbourhood, not just mentions.\n## Visualisation\nKnowledge graph visualised in an iframe; clusters form organically by domain activity (e.g. \"Germany\" cluster grows during Germany-heavy work periods). Clicking a node like \"LiDAR\" shows the sub-graph and a generated summary.\n## Self-improving loop\nThe system identifies its own knowledge gaps:\n1. Build a summary on a topic\n2. Flag what is not yet known\n3. Fire new research searches to fill gaps\n4. Repeat — the knowledge base evolves without explicit user direction\n## Five takeaways for replication\n1. **Taxonomy first**: build a small JSON file defining what you care about (domain vocabulary); inject it everywhere to anchor agent reasoning\n2. **Simple continuous agents**: start small; let them run overnight and surprise you each morning\n3. **Structured storage and retrieval**: choose a stack suited to your volume (e.g. Voyage + Supabase)\n4. **MCP access for agents**: make the knowledge base queryable via CLI or MCP so non-technical team members and agents can use it directly\n5. **Self-evolving design**: build the loop where agents surface gaps and fill them — the most powerful part of the system\n",
+    "notes/company-ai-knowledge-agent-multi-agent-news-research-pipeline-with-budget-controls": "A mobility data company describes their two-agent AI knowledge system built for staying on top of a specialised domain.\n## Agents\n- **Pulse** (news scout): ingests 44 newsletters nightly at 4am; identifies 3 items worth deeper research and feeds them to the research agent\n- **Research agent (Scout/Scalchi)**: picks up Pulse suggestions, user requests, or Slack drops; validates sources and populates the knowledge base\n## Source validation protocol\nFor every research item the agent checks:\n- Is the URL reachable?\n- Is there hallucination? Can the URL be revisited?\n- Is the content behind a paywall?\n- Does the article actually say what the insight claims? (citation check)\n## Budget and model mix\n- $20/day autonomous budget for self-directed research; $100+/day when user-directed\n- Model selection by task: Haiku for easy classification, Sonnet for most tasks, Opus for deep research\n## Temperature tagging\nEach stored insight is tagged with how often it should be revisited:\n- Breaking story: daily\n- EU regulation: every 6 months\nThis prevents the knowledge base from going stale without over-fetching.\n## Storage: RAG with Voyage + Supabase\nContent is chunked semantically using Voyage embeddings and stored in Supabase. Retrieval is by meaning and relationship, not keyword.\n## Slack integration\nAgents follow Slack channels. When a colleague drops a report, the research agent quietly acknowledges and ingests it — making knowledge capture ambient rather than deliberate.\n",
+    "notes/building-a-personal-ai-thinking-partner-optimising-for-staying-human-not-for-speed": "Insight from a talk by someone who built their own personal AI system (named Pippi) from scratch.\n## Learning approach\n- Superpower: using Claude to learn about Claude — ask the AI to explain itself\n- Early phase: replicated other people's AI workflows to understand the space\n- Realised the problem: spending more time adapting to *others'* ways of working than building their own\n- Decision: build from the inside out, not from the outside in\n## What they actually optimised for\nNot speed. Not productivity. Not automation.\nThe goal was: *how do I stay human in my interactions with AI?* — maintaining judgment, staying in the lead, ensuring the AI pushes *you* rather than replacing you.\n## Mechanisms that helped\n- **Writing and blogging**: slowing down the building pace, reflecting, connecting the dots, sharing the journey — forced lifting head up from \"build build build\" mode\n- **Token limits as a forcing function**: running out of tokens forced reconnecting with the real world\n- **CLAUDE.md as personal profile**: not used for project/automation descriptions but for describing *who you are* — attitude, how you like to interact, how your mind works\n## Pippi\nTheir personal AI assistant named Pippi (\"I have never done this before, so I truly believe I can do it\" — Pippi Longstocking reference). Demo version shown as a CLAUDE.md that starts every session.\n## Key takeaway\nThe frame of \"stay human\" and \"build from the inside out\" produces fundamentally different AI systems than optimising for speed or productivity. Identity and judgment must be the anchor.\n",
+    "notes/building-a-company-second-brain-taxonomy-driven-knowledge-with-ai-agents": "Key insight from a talk on structuring company knowledge for AI agents.\n## The problem\nMost knowledge today lives in agent threads (per-user, per-session, never becomes shared insight), Atlassian products, or Drive folders. Once stored, it's not maintained and hard to find — looks great week one, then falls apart.\n## Core concepts\n**Taxonomy as a JSON file**: Define the domain you care about in a structured taxonomy (topics, subtopics, keywords). Inject this small file into agent prompts to focus AI on the right meaning. Example: \"mobility\" = urban transportation, not physical therapy or HR recruitment.\n**Ontology matters — not just the data, but the relationships**: Build a knowledge graph, not just a document store. Taxonomy gives structure; ontology gives the relational fabric between pieces of knowledge.\n**Two-agent architecture**:\n- *Pulse*: stays on top of daily news, feeds the brain\n- *Scalchi*: does deep research and maintains the content via a maintenance loop\n**Knowledge curation loop**: Agents must actively curate sources, validate quality, and maintain relevance — not just ingest. Unmanaged knowledge becomes \"all over the place\" after the first week.\n## Speaker context\nData Mobility (New York) — advising cities on shared mobility, building products and investing. Needed domain-specific knowledge reliably available to agents.\n## Key takeaway\nA tiny JSON taxonomy file + structured agent roles (monitor vs. researcher) dramatically improves the signal-to-noise ratio when using AI over a company's knowledge base.\n",
+    "notes/sanity-s-content-lake-cqrs-architecture-content-os-pivot-pm-interview-prep": "Here is a comprehensive interview prep briefing document tailored for a Product Manager interviewing for Sanity's **Content Lake / Content Platform** domain. It synthesizes our discussion on their market pivot, architecture, and engineering execution into core PM themes.\n# Sanity Product Manager Interview Briefing\n**Target Domain:** Content Lake / Platform Infrastructure / Core Content Operations\n## 1. Executive Summary & Market Positioning\nAs a PM at Sanity, you must articulate why Sanity is moving beyond the generic **\"Headless CMS\"** category and executing a hard strategy shift toward becoming a **\"Content Operating System for the AI Era.\"**\n- **The Commodity Trap:** The baseline headless CMS market is commoditizing rapidly. Pure API-first storage layers are facing massive price pressure from open-source alternatives.\n- **The \"Marketer Backlash\":** First-generation headless architectures made developers happy but alienated non-technical editors (who lost visual editing and context).\n- **The AI Imperative:** Organizations don't just need content served to browsers anymore; they need content served cleanly to **AI Agents** and LLMs. Legacy text blobs require massive parsing overhead.\n### The Content OS Solution\nSanity is shifting positioning to target high-value Enterprise Content Operations ($100k+ DXPs like Adobe Experience Manager or Sitecore) by delivering:\n1. **Sanity Canvas:** Moving ideation out of Google Docs/Notion and into a top-level, loose visual playground connected back to structured data via *Field Labels*.\n2. **Native Automation (Functions):** Moving backend glue code off external serverless platforms (like Vercel/AWS) and running logic *natively inside Sanity* via event-driven triggers.\n3. **AI Native Structuring:** Leveraging the Model Context Protocol (MCP) to let internal and external AI agents securely programmatically read, write, and manipulate structured content directly against the schema.\n## 2. Technical Architecture Deep Dive (The Content Lake)\nTo lead a team of core storage and API engineers, you need to understand the mechanics of how the Content Lake achieves zero-bottleneck read speeds while maintaining absolute data integrity.\n### Data Storage Strategy: The Decoupled Graph\n- **Schema-less at Core:** The database layer is schema-agnostic and stores raw JSON documents. Strict type-safety, validation rules, and constraints are declared *upstream in code* (Sanity Studio setup). This eliminates the need for slow, traditional SQL database schema migrations.\n- **Referential Integrity:** Documents connect natively via a specialized object shape (`{_type: 'reference', _ref: 'target_id'}`). The database maps these relationships, allowing deep graph traversal without executing expensive, standard SQL table `JOIN` statements.\n### Command Query Responsibility Segregation (CQRS)\nSanity scales read and write paths completely independently.\n#### The Write Path (POST / Mutations)\n- Core mutations use **Delta Patches** (sending only changed JSON values, not full payloads).\n- **The Source of Truth:** Changes are written to highly tuned **PostgreSQL** instances running on Google Compute Engine (GCE). It acts strictly as an immutable, append-only transaction ledger log, ensuring strict **ACID compliance** and keeping a history of every change event ever made.\n- **The Sync Loop:** Once PostgreSQL confirms the save, the GKE compute layer replicates the update to Elasticsearch and broadcasts the event globally via Google Cloud Pub/Sub to invalidate edge caches.\n#### The Read Path (GET / GROQ Queries)\n- **PostgreSQL is never woken up for read queries.**\n- Read queries bypass relational constraints entirely. If an asset is a cache miss on the global Google Cloud CDN edge, the request is served by **Elasticsearch clusters**.\n- **The Inverted Index Strategy:** Elasticsearch parses the flat JSON documents into an inverted schema, mapping field paths and values directly to arrays of Document IDs.\n- **GROQ Pipeline Acceleration:** Because of the inverted schema, when a GROQ query filtering on types or tags executes, the database engine does instantaneous bitwise math intersections across value lookups, bypassing table scans completely.\n## 3. High-Fidelity Asset Pipeline Mechanics\nWhen a user uploads mixed media (e.g., an e-commerce page with text and promotional banners), Sanity bifurcates the data ingestion across distinct cloud pathways:\n- **Text Element Payload:** Handled via the core JSON database pipeline (PostgreSQL + Elasticsearch). Rich text is parsed into **Portable Text** (blocks of structural JSON data instead of messy raw HTML strings).\n- **Binary Asset Payload:** The heavy raw file byte stream (.jpg, .png, .mp4) is offloaded straight to **Google Cloud Storage (GCS)** buckets.\n- **Asset Metadata Document:** A separate system JSON file (`_type: \"sanity.imageAsset\"`) is automatically created in the core datastore. GKE asset workers analyze the upload to extract metadata—pixel sizes, aspect ratios, color palettes, and base64 Low-Quality Image Placeholders (LQIP).\n- **The Reference Link:** The product document simply saves a lightweight pointer reference ID (`_ref`) pointing to the image asset document.\n- **On-the-Fly Optimization Engine:** When a web application pulls the asset via the CDN, it appends parameters (e.g., `?w=500&fm=webp`). A serverless image-processing microservice captures the request on a cache miss, processes the transformation directly off the raw GCS file origin, and caches the newly generated file layout at the Cloud CDN Edge.\n## 4. Operational PM Workflows: \"Human-in-the-Loop AI\"\nBe prepared to describe how this architectural capability converts to real-world user value.\n**Example Scenario: A Localized E-Commerce Product Launch Campaign**\n- **The Ingestion:** Content writers draft copy freely within **Sanity Canvas**. They apply *Field Labels* using AI suggestions. Once they hit deliver, the unstructured text breaks apart and perfectly maps to complex, deep schemas in the production Studio.\n- **The Automation Trigger:** A native event-driven **Function** detects the new English copy mutation (`delta::changedOnly('description')`). It fires an automated **Agent Action** using the internal AI translation pipeline.\n- **Governance & Safeguards:** The AI Agent pulls down explicit \"Glossary and Style Guide\" documents living elsewhere in the Content Lake to protect brand keywords. The translated output goes to an isolated staging wrapper (**Content Releases**).\n- **The Human Gatekeeper:** External translation agencies log into Sanity Studio directly. They don't copy-paste CSVs or spreadsheets; they review the 90% accurate pre-translated data side-by-side using live previews and complete final polishing changes before publishing the entire release bundle simultaneously.\n## 5. Potential Interview Questions & Strategic Framing\n### Q1: How do you prioritize feature development for a system that serves both core developers and marketing editors?\n- **PM Frame:** \"I treat Sanity as an organization-centric ecosystem rather than a project-centric one. Developer metrics focus on developer velocity, sub-second API write performance, and zero-downtime content migrations. Marketing metrics focus on time-to-publish and minimizing out-of-system drafting (like tracking how much work stays in Canvas vs. leaking to Google Docs). My goal is building the structural bridge—such as Field Labels or native Functions—so a win for editorial efficiency doesn't create technical debt for engineering.\"\n### Q2: Why build a custom ledger on Postgres and index on Elasticsearch instead of using a standard document store like MongoDB?\n- **PM Frame:** \"Content platforms have opposing platform requirements: writes must be highly transactional, auditable, and collaborative, while reads must scale instantly to millions of global end-users without relational blocking. MongoDB forces you to compromise on transactional consistency or lock performance at scale. By using Postgres strictly as an append-only transaction ledger, we guarantee infinite history tracking and ACID write compliance. By mirroring that instantly to Elasticsearch's inverted index schema, we ensure our functional query language, GROQ, can execute complex graph traversals and projections at out-of-memory speed without impacting live database write threads.\"\n### Q3: What KPI would you look at to measure the success of Sanity's new AI Content Agent and MCP tools?\n- **PM Frame:** \"The main north-star metric is **Time-to-Delivery for Complex Workflows** (e.g., localizing an entry or executing a multi-document brand audit). I would look closely at the ratio of *Programmatic Mutations (AI/Agent driven via MCP/Functions)* versus *Manual UI Mutations (human clicks)*. Success looks like an increase in automated background mutations accompanied by a drop in API mutation error rates, proving that our schema-aware AI trust model is working effectively.\"\n",
+    "notes/bff-implementation-web-vs-mobile-response-shaping-with-shared-api-gateway-middleware": "Concrete code patterns for implementing the BFF (Backend for Frontend) architecture, showing how a shared endpoint serves different clients with different response shapes.\n## Web BFF (Node.js/Express)\nAggregates from multiple services and enriches the response for web consumers:\n```javascript\napp.get('/api/products', async (req, res) => {\n  const { category, page } = req.params;\n  const products = await productService.getByCategory(category, page);\n  const reviews = await reviewService.getReviews(products.map(p => p.id));\n  const wishlist = await userService.getWishlist(req.user.id);\n  const recommendations = await aiService.getRecommendations(req.user.id);\n  res.json({\n    products: products.map(p => ({ ...p, reviews: reviews[p.id], isInWishlist: wishlist.includes(p.id) })),\n    recommendations,\n    seoMeta: { title: `${category} products` },\n    pagination: { page, total: 450, perPage: 20 }\n  });\n});\n```\n## Mobile BFF (Node.js/Express)\nServes the same endpoint with Redis caching and minimal response shape:\n```javascript\napp.get('/api/products', async (req, res) => {\n  const { category, page } = req.params;\n  const products = await redis.get(`products:${category}:${page}`);\n  if (!products) {\n    const freshProducts = await productService.getByCategory(category, page);\n    await redis.set(`products:${category}:${page}`, freshProducts, 'EX', 600);\n  }\n  res.json({\n    products: products.map(p => ({ id: p.id, name: p.name, price: p.price })),\n    pagination: { page, hasMore: page < 10 }\n  });\n});\n```\n## API Gateway middleware (NGINX config)\n```javascript\nlocation /api/ {\n    auth_request /validate_token;\n    limit_req zone=web burst=100 nodelay;\n    limit_req zone=mobile burst=50 nodelay;\n    gzip on;\n    gzip_types application/json text/plain;\n    access_log /var/log/nginx/api.log request_id=$request_id;\n    if ($http_user_agent ~* \"mobile|android|iphone\") {\n        proxy_pass http://bff_mobile;\n    }\n    proxy_pass http://bff_web;\n}\n```\nThe gateway routes mobile user-agents to the mobile BFF and all others to the web BFF, while enforcing auth, rate limits, and compression uniformly.\n",
+    "notes/bff-architecture-pattern-client-specific-api-layers-between-frontend-and-backend-services": "The Backend for Frontend (BFF) pattern introduces a dedicated API aggregation layer tailored per client type (web, mobile). The BFF sits behind a shared API Gateway that handles cross-cutting concerns, and in front of core backend microservices.\n## Architecture overview\nClients → BFF (client-specific) → API Gateway (shared middleware) → Core Backend Services → Database + Cache\n- **Web BFF**: full data, pagination metadata, SEO fields, recommendations, wishlist integration\n- **Mobile BFF**: compact JSON, Redis-cached data, offline support, minimal fields\n## Concrete request flow (e-commerce product browse)\n### Web path\n1. `GET /api/products?category=electronics&page=1` from React frontend\n2. API Gateway validates JWT, checks rate limit (100 req/min), adds request tracing ID, logs request\n3. Web BFF aggregates: products + reviews + wishlist + recommendations + SEO metadata + pagination\n4. API Gateway compresses and returns full response\n### Mobile path\n1. Same endpoint from React Native app\n2. API Gateway validates JWT, stricter rate limit (50 req/min), same tracing/logging\n3. Mobile BFF fetches from Redis cache, returns only `{id, name, price, image}` per product, minimal pagination\n4. API Gateway applies more aggressive compression, sets `Cache-Control: max-age=600`\n## Separation of concerns summary\n<table header-row=\"true\">\n<tr>\n<td>Concern</td>\n<td>API Gateway (Middleware)</td>\n<td>BFF</td>\n</tr>\n<tr>\n<td>Authentication</td>\n<td>validates token</td>\n<td>—</td>\n</tr>\n<tr>\n<td>Rate limiting</td>\n<td>per client type</td>\n<td>—</td>\n</tr>\n<tr>\n<td>Logging/Tracing</td>\n<td>cross-cutting</td>\n<td>—</td>\n</tr>\n<tr>\n<td>Data shaping</td>\n<td>—</td>\n<td>client-specific</td>\n</tr>\n<tr>\n<td>Service aggregation</td>\n<td>—</td>\n<td>multi-service calls</td>\n</tr>\n<tr>\n<td>Caching strategy</td>\n<td>HTTP cache headers</td>\n<td>data layer caching</td>\n</tr>\n<tr>\n<td>Client awareness</td>\n<td>—</td>\n<td>knows it's web/mobile</td>\n</tr>\n</table>\n",
+    "notes/being-ai-native-means-workflow-readiness-not-doing-everything-with-ai": "So here are some thoughts about the AI Native Company.\nWhat is AI Native? It doesn't really mean that we need to make everything with AI. This, for me, is really about making your workflow in a way that you're ready to do the switch. It means that you are conscious and aware of the AI tools and you improve your workflow to provide the right context. You can also connect the different parts and make things flow so that eventually your AI can have programmatic access to those contexts.\nThat could be being aware of recording meetings, writing decision documents, and being better at writing things down. That could be a good exercise to prepare your company for being AI Native.\nAnother aspect is about thinking a bit, not AI first, but always asking the question: can this be optimised with AI? Could we actually automate some repetitive workflow with AI? Evaluate AI. It does not mean it's not equal to use AI, but evaluate AI and consider that an important part of the technology stack that you should evaluate fairly. If it doesn't give good enough results, don't use it, but don't push back.\n",
+    "notes/structured-documentation-for-ai-assisted-engineering-adr-prd-and-bdd": "Source: *BDD, ADR, PRD, WTF: Capturing Decisions for Humans and AI Alike* — Michal Cichra, Safe Intelligence\n## Core problem: limited context\nBoth humans and LLMs suffer from limited context. As products evolve, engineers forget *why* code paths were built. This is doubly problematic for AI agents operating autonomously — they need explicit, structured documentation to navigate, write, and safely test code.\n## Formats for capturing decisions\n- **ADR (Architecture Decision Record):** Documents *why* an architectural choice was made and *how* to enforce it. AI agents use ADR files to understand structural rules and find instructions when they break a boundary. If a commit violates an architectural constraint, the CI pipeline rejects it and links the agent back to the relevant ADR.\n- **PRD (Product Requirements Document):** A lightweight doc tracking *why* a feature exists, the problem it solves, and the user's journey. Serves as a reference frame weeks later when original intent is forgotten — both by humans and AI.\n- **BDD (Behavior-Driven Development) with Cucumber:** AI-generated tests are hard to read. BDD with Cucumber creates intermediate, executable specifications in plain human language — bridging PRDs and working code, making reviews straightforward.\n## Constraining AI in UI design\nBuilding consistent UIs with AI is hard. Solution: adopt strict **design systems and pattern libraries** with rigid rules (e.g., only one primary button per page). Providing small component snippets forces agents to compose layouts predictably rather than generating visual chaos.\n## Enforcement loop (Git hooks + CI)\n- AI agents deliver changes as pull requests.\n- Pre-defined Git hooks and CI pipelines check linting, formatting, types, structural rules, and documentation compliance.\n- If an AI agent pushes code that violates an architectural boundary (e.g., BDD tests touching the DB), the commit is rejected and the agent is linked back to the original ADR/PRD to read, learn, and fix.\n## Key takeaway\nHigh-level concepts like code style and layout should be automated and non-negotiable — freeing both human and AI effort for genuine product goals. Documentation is not overhead; it is the control surface for autonomous AI agents.\n",
+    "notes/llm-agent-coding-behavioral-guidelines-think-first-minimalism-surgical-changes-goal-driven-execution": "Behavioral guidelines from Andrej Karpathy's CLAUDE.md to reduce common LLM coding mistakes.\n## 1. Think Before Coding\nDon't assume. Don't hide confusion. Surface tradeoffs.\n- State assumptions explicitly; if uncertain, ask\n- Present multiple interpretations — don't pick silently\n- Suggest simpler approaches when they exist\n- If something is unclear, stop, name what's confusing, and ask\n## 2. Simplicity First\nMinimum code that solves the problem. Nothing speculative.\n- No features beyond what was asked\n- No abstractions for single-use code\n- No \"flexibility\" that wasn't requested\n- No error handling for impossible scenarios\n- If you write 200 lines and it could be 50, rewrite it\n## 3. Surgical Changes\nTouch only what you must. Clean up only your own mess.\n- Don't \"improve\" adjacent code, comments, or formatting\n- Don't refactor things that aren't broken\n- Match existing style, even if you'd do it differently\n- Remove imports/variables/functions that YOUR changes made unused — don't touch pre-existing dead code\n## 4. Goal-Driven Execution\nDefine success criteria. Loop until verified.\n- Transform tasks into verifiable goals: \"Fix the bug\" → \"Write a test that reproduces it, then make it pass\"\n- For multi-step tasks, state a brief plan with verify steps\n- Strong success criteria enable independent looping; weak criteria require constant clarification\n",
+    "notes/karpathy-s-llm-wiki-reference-gist-on-language-models": "Reference resource by Andrej Karpathy — a wiki-style gist covering language model concepts.\nSource: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f\n",
+    "notes/claude-code-mcp-three-scope-levels-and-config-storage": "### claude.ai MCP\nAdded in the UI; applies globally across all chats and projects, separate from Claude Code.\n### Claude Code MCP — Three Scopes\n- **`-scope user`** — Available globally across all projects. Use for servers you always want everywhere (e.g., GitHub, search tools). General personal preference.\n- **`-scope local`** — Per-user, per-project. The **default scope** when none is specified. Good for project-specific servers (database, Sentry instance). Personal/workflow projects.\n- **`-scope project`** — Writes to `.mcp.json` in the project root. Shared via git. Use for servers the whole team needs. Shared projects.\n### Config Storage\n- **`local`**** and ****`user`**** scopes**: Both store in `~/.claude.json` — local is keyed by project path, user is global.\n- **`project`**** scope**: Stores in `.mcp.json` at the project root; committable to git for team sharing.\n",
+    "notes/four-ways-to-use-claude-from-chat-user-to-api-builder": "Claude can be used in four distinct modes:\n- **End user** — use Claude via the chat interface to reach a goal (e.g., travel planning, learning something) through chat, projects, or design workflows\n- **Builder with Claude Code** — build and learn a new technology using Claude Code as a development partner\n- **API builder** — build applications using the Claude API, with Claude Code for implementation\n- **Automation** — speed up and automate recurring workflows (Claude Code automation, Chrome plugin)\n<empty-block/>\n",
+    "notes/claude-customization-layers-from-system-prompt-to-ui-settings": "Claude.ai customization options: Project instructions, user preferences, writing styles, MCP tools, and skills. Claude Code uses claude.md, MCP tools, and skills for project-level customization.\n**Customization hierarchy:**\nSystem Prompt (API-level) → Project Instructions → User Preferences → Custom Styles → MCP Tools\n## System Prompt\nOnly used when building via the Claude API. Recommended structure:\n1. ROLE — What the agent is and who it serves\n2. CONTEXT — Background knowledge it needs\n3. BEHAVIOR — How it should act, tone, style\n4. CONSTRAINTS — What it must never do\n5. OUTPUT — Format expectations\n## Project Instructions\nUsed in claude.ai projects as persistent context. Also useful for iterating on system prompts before persisting them programmatically.\n## User Preferences & Writing Styles\nBoth apply to claude.ai only (not Claude Code/API).\n- **User preference**: Account-level defaults for all chats and projects on claude.ai\n- **Writing style**: Per-chat setting for how Claude writes; pre-defined or custom styles available globally\n",
+    "notes/claude-skill-system-skill-md-format-locations-and-types": "Skill format is common to both claude.ai and Claude Code, using a `SKILL.md` file.\n**Where skills can live:**\n- claude.ai — via upload of a zipped folder\n- Claude Code globally — `~/.claude/skills`\n- Claude Code per-project — `.claude/skills` under the project folder\n**Types of skills:**\n- **Capability Uplift Skills**: Grant new capabilities (e.g., web scraping via Firecrawl, creating PDF files). Require `SKILL.md` + `scripts/` + `resources/`, have dependencies, and need code execution enabled.\n- **Encoded Preference Skills**: Define a specific behavior pattern (e.g., commit message format). `SKILL.md` only; Claude reads and follows. No dependencies, works anywhere.\n",
+    "notes/claude-prototyping-to-production-workflow": "## Prototyping vs Building\nUse claude.ai for concept and prototype, Claude Code locally for writing code. Project Instructions in claude.ai serve as rough drafts for system prompts before production.\n**Three distinct layers:**\n- RUNTIME: API system field — injected per request, programmatically controlled\n- DEVELOPMENT: CLAUDE.md — tells Claude Code about the project, lives in the repo\n- PROTOTYPING: Project instructions in claude.ai — iteration-friendly, not production\n## Recommended Workflow\n1. **PROTOTYPE** on claude.ai Project — ideate, validate concepts, design APIs, decide architecture\n2. **DISTILL** after each session — ask claude.ai to summarize decisions → paste into CLAUDE.md\n3. **CODE** with Claude Code — reads CLAUDE.md, has full decision context\n4. **SYNC** back to claude.ai Project — upload updated CLAUDE.md + key artifacts\n5. **REPEAT**\nHandoff prompt: *\"Summarize all the decisions we've made in this session into a CLAUDE.md format I can paste into my project.\"*\n",
+    "questions/what-are-the-key-goals-and-workflows-for-using-claude-effectively": "Suggested answer — synthesised from notes: Four Ways to Use Claude, Claude Customization Layers, Claude Prototyping-to-Production Workflow.\nClaude supports four distinct usage modes: (1) end user — chat interface for goals like planning or learning; (2) builder with Claude Code — Claude as development partner; (3) API builder — custom applications via the Claude API; (4) automation — recurring workflows via Claude Code or extensions.\nEffective use requires customisation at the right layer: System Prompt for API-level control; Project Instructions in claude.ai for persistent project context; User Preferences for account-wide defaults; MCP Tools and Skills for capability extension.\nRecommended workflow: prototype in claude.ai using Project Instructions as a scratchpad, then transition to Claude Code for implementation using CLAUDE.md for project-level context. Handoff prompt: \"Summarize all decisions we've made into a CLAUDE.md format I can paste into my project.\"\n",
+    "ideas/ohl-instead-of-okr-objective-hypothesis-learning": "",
+    "ideas/ohl-vs-okr-short-capture": "",
+    "ideas/ai-personalized-3d-printed-earring-e-commerce-site": "",
+    "ideas/limited-edition-drop-earring-brand-with-seasonal-sell-out-batches": "",
+    "ideas/import-and-resell-3d-printed-relaxation-toys-from-china": "",
+    "ideas/spanish-language-practice-chatbot": ""
+  }
+}
